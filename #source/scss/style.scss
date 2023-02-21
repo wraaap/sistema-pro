@@ -1,0 +1,74 @@
+@use "sass:math";
+// Подключение миксинов ===========================================================================================================================================================================================================================================================================
+@import "modules/mixins";
+
+@import "fonts.scss";
+@import "normalize.scss";
+@import "modules/variables.scss";
+@import "modules/custom.scss";
+@import "modules/animation.scss";
+@import "header.scss";
+@import "hero.scss";
+@import "special-offer.scss";
+@import "guarantees.scss";
+@import "scheme.scss";
+@import "production.scss";
+@import "add-service.scss";
+@import "about.scss";
+@import "trust.scss";
+@import "footer.scss";
+
+
+.title {
+    &-value {
+        font-weight: 600;
+        color: $color-grafit;
+        font-size: 64px;
+    }
+    &-description {
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 37px;
+        color: #000;
+    }
+
+}
+input,
+button,
+textarea {
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+    border: none;
+}
+.button {
+    width: 255px;
+    height: 55px;
+    color: $white;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+.button-red {
+    background-color: $color-red;
+}
+.button-dark {
+    background-color: $black;
+}
+
+.highlight-red {
+    background-color: $color-red;
+    color: $white;
+    opacity: 1;
+}

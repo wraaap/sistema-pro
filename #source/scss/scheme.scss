@@ -1,0 +1,137 @@
+.scheme {
+
+    background-color: $color-grey;
+
+    // .scheme__container
+
+    &__container {
+    }
+
+    // .scheme__row
+
+    &__row {
+        display: grid;
+        grid-template-columns: 58% 1fr;
+        align-self: center;
+        @media (max-width: 768px){
+            grid-template-columns: 1fr;
+            align-items: center;
+        }
+    }
+
+    // .scheme__img-cnt
+
+    &__img-cnt {
+    }
+    
+    // .scheme__img-body
+    
+    &__img-body {
+        position: relative;
+        @include adaptiveValue("margin-left", 0, -200);
+    }
+    
+    // .scheme__img
+    
+    &__img {
+        max-width: 100%;
+    }
+
+    // .scheme__img-circle
+
+    &__img-circle {
+        width: 3.76%;
+        height: 4.23%;
+        border-radius: 50%;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        opacity: 0;
+        @include adaptiveValue("font-size", 27, 14);
+        @media (any-hover: hover) {
+            &:hover {
+                color: $white;
+                background-color: $color-red;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__img-circle-1 {
+        top: 42.4%;
+        left: 30%;
+    }
+
+    &__img-circle-2 {
+        top: 35.7%;
+        left: 30%;
+    }
+
+    &__img-circle-3 {
+        top: 29%;
+        left: 30%;
+    }
+
+    &__img-circle-4 {
+        top: 10.2%;
+        left: 39.8%;
+    }
+
+    &__img-circle-5 {
+        top: 10.2%;
+        left: 46.6%;
+    }
+
+    &__img-circle-6 {
+        top: 13.4%;
+        left: 52.8%;
+    }
+
+    &__img-circle-7 {
+        top: 36.9%;
+        left: 64.4%;
+    }
+
+    &__img-circle-8 {
+        top: 45.1%;
+        left: 64.4%;
+    }
+
+    &__img-circle-9 {
+        top: 58.5%;
+        left: 64.4%;
+    }
+
+    &__img-circle-10 {
+        top: 58.5%;
+        left: 74.1%;
+    }
+
+    // .scheme__list
+
+    &__list {
+        display: flex;
+        align-items: center;
+        @media (max-width:768px){
+            justify-content: center;
+        }
+    }
+
+    // .scheme__list-item
+
+    &__list-item {
+    }
+
+    // .scheme__list-link
+
+    &__list-link {
+        font-weight: 600;
+        line-height: 200%;
+        letter-spacing: 0.01em;
+        color: $white;
+        @include adaptiveValue("font-size", 24, 18);
+    }
+}

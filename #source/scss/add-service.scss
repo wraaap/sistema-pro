@@ -1,0 +1,62 @@
+.add-service {
+
+    background-color: $white;
+    @include adaptiveValue("padding-top", 130, 80);
+    @include adaptiveValue("padding-bottom", 130, 80);
+
+    // .add-service__container
+
+    &__container {
+    }
+
+    // .add-service__title-value
+
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: $color-grafit;
+        margin-bottom: 55px;
+    }
+
+    // .add-service__row
+
+    &__row {
+    }
+
+    // .add-service__item
+
+    &__item {
+        @include adaptiveValue("padding", 50, 5);
+        padding: 50px;
+    }
+
+    // .add-service__item-img
+
+    &__item-img {
+        margin-bottom: 50px;
+    }
+
+    // .add-service__item-title
+
+    &__item-title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: $color-black;
+        margin-bottom: 11px;
+    }
+
+    // .add-service__item-text
+
+    &__item-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: $color-black;
+        margin-bottom: 30px;
+    }
+}

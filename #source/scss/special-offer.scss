@@ -1,0 +1,56 @@
+.special-offer {
+
+    
+
+    // .special-offer__row
+
+    &__row {
+        margin: 0 auto;
+        max-width: 2560px;
+        @include adaptiveValue("min-height", 640, 540);
+    }
+
+    // .special-offer__left
+
+    &__left {
+        background: url(../img/home/offer/special-offer-1.jpg) bottom/cover no-repeat;
+    }
+
+    // .special-offer__right
+
+    &__right {
+        background: url(../img/home/offer/special-offer-2.jpg) bottom/cover no-repeat;
+    }
+    // .special-offer__body
+
+    &__body {
+        @media (max-width: 575px) {
+            height: 480px;
+        }
+    }
+
+    // .special-offer__title
+
+    &__title {
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: $white;
+        // min-height: 347px;
+        @include adaptiveValue("font-size", 48, 32);
+        @include adaptiveValue("min-height", 347, 180);
+        @include adaptiveValue("margin-top", 85, 50);
+    }
+
+    // .special-offer__description
+
+    &__description {
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: $white;
+        &:not(:last-child) {
+            margin-bottom: 29px;
+        }
+        @include adaptiveValue("font-size", 36, 24);
+        @include adaptiveValue("min-height", 55, 125);
+    }
+}

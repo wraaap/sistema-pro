@@ -1,0 +1,156 @@
+.footer {
+    min-height: 465px;
+    color: $white;
+    background-color: $color-grafit;
+    padding-top: 60px;
+    padding-bottom: 110px;
+
+    // .footer__container
+
+    &__container {
+    }
+
+    // .footer__row
+
+    &__row {
+    }
+
+    // .footer__contact
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: em(768)) {
+            &:not(:last-child) {
+                margin-bottom: rem(30);
+            }
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {
+        width: 266px;
+        padding-bottom: 34px;
+        display: block;
+        min-height: auto;
+    }
+
+    // .footer__form
+
+    &__form {
+        margin-bottom: 57px;
+    }
+
+    // .footer__form-input
+
+    &__form-input {
+    }
+
+    // .footer__form-button
+
+    &__form-button {
+    }
+
+    // .footer__social
+
+    &__social {
+        display: flex;
+        margin-bottom: 43px;
+    }
+
+    // .footer__social-item
+
+    &__social-item {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-right", 46, 10);
+        }
+    }
+
+    // .footer__social-link
+
+    &__social-link {
+    }
+
+    // .footer__copy
+
+    &__copy {
+        font-weight: 500;
+        line-height: 150%;
+        color: $white;
+        opacity: 0.25;
+    }
+
+    &__menu {
+        display: flex;
+        flex-wrap: wrap
+    }
+
+    // .footer__item
+
+    &__item {
+        @include adaptiveValue("padding-left", 20, 10);
+        @include adaptiveValue("padding-right", 20, 10);
+        @media (max-width: em(1200)) {
+            &:not(:last-child) {
+                margin-bottom: rem(30);
+            }
+        }
+        @media (max-width: em(768)) {
+            padding-left: 0;
+        }
+    }
+
+    // .footer__item-spoller
+
+    &__item-spoller {
+    }
+
+    // .footer__item-spoller-title
+
+    &__item-spoller-title {
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: $white;
+        padding-top: 5px;
+        padding-bottom: 19px;
+    }
+}
+.menu-footer {
+
+    // .menu-footer__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .menu-footer__item
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 17px;
+        }
+    }
+
+    // .menu-footer__link
+
+    &__link {
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.01em;
+        color: $white;
+        opacity: 0.5;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $white;
+                opacity: 0.7;
+            }
+        }
+    }
+}
+.index-page {
+    padding-bottom: 0;
+}

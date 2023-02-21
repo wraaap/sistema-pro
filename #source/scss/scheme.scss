@@ -16,7 +16,7 @@
         @media (max-width: 768px){
             grid-template-columns: 1fr;
             align-items: center;
-        }
+        } 
     }
 
     // .scheme__img-cnt
@@ -28,7 +28,7 @@
     
     &__img-body {
         position: relative;
-        @include adaptiveValue("margin-left", 0, -200);
+        @include adaptiveValue("margin-left", 0, -200, 2600, 600);
     }
     
     // .scheme__img

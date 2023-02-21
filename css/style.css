@@ -1335,14 +1335,24 @@ a {
 .scheme__img-body {
   position: relative;
 }
-@supports (margin-left: clamp( -14.2857142857rem , -16.3265306224rem  +  8.9285714732vw , 0.0000000714rem )) {
+@supports (margin-left: clamp( -14.2857142857rem , -18.5714285929rem  +  10.00000005vw , 0.0000000714rem )) {
   .scheme__img-body {
-    margin-left: clamp( -14.2857142857rem , -16.3265306224rem  +  8.9285714732vw , 0.0000000714rem );
+    margin-left: clamp( -14.2857142857rem , -18.5714285929rem  +  10.00000005vw , 0.0000000714rem );
   }
 }
-@supports not (margin-left: clamp( -14.2857142857rem , -16.3265306224rem  +  8.9285714732vw , 0.0000000714rem )) {
+@supports not (margin-left: clamp( -14.2857142857rem , -18.5714285929rem  +  10.00000005vw , 0.0000000714rem )) {
   .scheme__img-body {
-    margin-left: calc(-14.2857142857rem + 14.2857143571 * (100vw - 22.8571428571rem) / 162.8571428571);
+    margin-left: calc(-14.2857142857rem + 14.2857143571 * (100vw - 42.8571428571rem) / 148.2142857143);
+  }
+}
+@media (min-width: 185.7142857143em) {
+  .scheme__img-body {
+    margin-left: inherit;
+  }
+}
+@media (max-width: 42.8571428571em) {
+  .scheme__img-body {
+    margin-left: inherit;
   }
 }
 .scheme__img {

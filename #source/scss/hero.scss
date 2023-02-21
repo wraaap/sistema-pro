@@ -78,7 +78,7 @@
     max-width: 800px;
     text-align: center;
     margin-bottom: 28px;
-    @include adaptiveValue("font-size", 64, 42);
+    @include adaptiveValue("font-size", 64, 34);
 }
 
 .hero-swiper {

@@ -5,43 +5,43 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-Bold";
+  font-family: "Gilroy";
   src: url("../fonts/gilroy-bold.woff2") format("woff2"), url("../fonts/gilroy-bold.woff") format("woff"); /* Firefox >= 3.6, any other modern browser */
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-Heavy";
+  font-family: "Gilroy";
   src: url("../fonts/gilroy-heavy.woff2") format("woff2"), url("../fonts/gilroy-heavy.woff") format("woff"); /* Firefox >= 3.6, any other modern browser */
   font-weight: 650;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-SemiBold";
+  font-family: "Gilroy";
   src: url("../fonts/gilroy-semibold.woff2") format("woff2"), url("../fonts/gilroy-semibold.woff") format("woff"); /* Firefox >= 3.6, any other modern browser */
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy";
   src: url("../fonts/gilroy-medium.woff2") format("woff2"), url("../fonts/gilroy-medium.woff") format("woff"); /* Firefox >= 3.6, any other modern browser */
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy";
   src: url("../fonts/gilroy-regular.woff2") format("woff2"), url("../fonts/gilroy-regular.woff") format("woff"); /* Firefox >= 3.6, any other modern browser */
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-Thin";
+  font-family: "Gilroy";
   src: url("../fonts/gilroy-thin.woff2") format("woff2"), url("../fonts/gilroy-thin.woff") format("woff"); /* Firefox >= 3.6, any other modern browser */
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-UltraLight";
+  font-family: "Gilroy";
   src: url("../fonts/gilroy-ultralight.woff2") format("woff2"), url("../fonts/gilroy-ultralight.woff") format("woff"); /* Firefox >= 3.6, any other modern browser */
   font-weight: 200;
   font-style: normal;
@@ -695,6 +695,16 @@ a {
   text-transform: uppercase;
   display: flex;
 }
+@supports (font-size: clamp( 0.8571428571rem , 0.8367346939rem  +  0.0892857143vw , 1rem )) {
+  .promo-header__left-link {
+    font-size: clamp( 0.8571428571rem , 0.8367346939rem  +  0.0892857143vw , 1rem );
+  }
+}
+@supports not (font-size: clamp( 0.8571428571rem , 0.8367346939rem  +  0.0892857143vw , 1rem )) {
+  .promo-header__left-link {
+    font-size: calc(0.8571428571rem + 0.1428571429 * (100vw - 22.8571428571rem) / 162.8571428571);
+  }
+}
 .promo-header__left-link::after {
   content: "";
   display: block;
@@ -711,6 +721,16 @@ a {
 }
 .promo-header__right-link {
   font-weight: 700;
+}
+@supports (font-size: clamp( 0.8571428571rem , 0.8367346939rem  +  0.0892857143vw , 1rem )) {
+  .promo-header__right-link {
+    font-size: clamp( 0.8571428571rem , 0.8367346939rem  +  0.0892857143vw , 1rem );
+  }
+}
+@supports not (font-size: clamp( 0.8571428571rem , 0.8367346939rem  +  0.0892857143vw , 1rem )) {
+  .promo-header__right-link {
+    font-size: calc(0.8571428571rem + 0.1428571429 * (100vw - 22.8571428571rem) / 162.8571428571);
+  }
 }
 .promo-header__right-link-underline {
   margin-left: 10px;
@@ -748,22 +768,47 @@ a {
 .body-header__row {
   justify-content: space-between;
 }
-@media (max-width: 450px) {
-  .body-header__row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
 .body-header__menu {
   display: flex;
   justify-content: center;
   flex: 1 0 auto;
 }
-@media (max-width: 55em) {
+@media (max-width: 1480px) {
   .body-header__menu {
-    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    overflow: auto;
+    background-color: #2a2c2b;
+    padding: 3.5714285714rem;
+    transition: all 0.3s ease 0s;
+    z-index: 4;
+    flex-direction: column;
+  }
+  @supports (padding-left: clamp( 1.4285714286rem , -0.4081632653rem  +  8.0357142857vw , 14.2857142857rem )) {
+    .body-header__menu {
+      padding-left: clamp( 1.4285714286rem , -0.4081632653rem  +  8.0357142857vw , 14.2857142857rem );
+    }
+  }
+  @supports not (padding-left: clamp( 1.4285714286rem , -0.4081632653rem  +  8.0357142857vw , 14.2857142857rem )) {
+    .body-header__menu {
+      padding-left: calc(1.4285714286rem + 12.8571428571 * (100vw - 22.8571428571rem) / 162.8571428571);
+    }
+  }
+  @supports (padding-right: clamp( 1.4285714286rem , -0.4081632653rem  +  8.0357142857vw , 14.2857142857rem )) {
+    .body-header__menu {
+      padding-right: clamp( 1.4285714286rem , -0.4081632653rem  +  8.0357142857vw , 14.2857142857rem );
+    }
+  }
+  @supports not (padding-right: clamp( 1.4285714286rem , -0.4081632653rem  +  8.0357142857vw , 14.2857142857rem )) {
+    .body-header__menu {
+      padding-right: calc(1.4285714286rem + 12.8571428571 * (100vw - 22.8571428571rem) / 162.8571428571);
+    }
+  }
+  .menu-open .body-header__menu {
+    left: 0;
   }
 }
 .body-header__menu-catalog {
@@ -842,19 +887,24 @@ a {
   margin-left: 11px;
   margin-top: 3px;
 }
+@media (max-width: 1480px) {
+  .body-header__menu-link {
+    min-height: 40px;
+  }
+}
 .body-header__menu-header {
   padding-left: 0;
   display: flex;
 }
 @media (max-width: 1480px) {
   .body-header__menu-header {
-    display: none;
+    flex-direction: column;
+    row-gap: 15px;
   }
 }
 .body-header__phone {
   display: flex;
   justify-content: end;
-  width: 220px;
 }
 .body-header__phone::before {
   content: "";
@@ -866,9 +916,8 @@ a {
   margin-top: 3px;
 }
 @media (max-width: 450px) {
-  .body-header__phone {
-    justify-content: center;
-    margin: 10px;
+  .body-header__phone::before {
+    display: none;
   }
 }
 .body-header__phone-body {
@@ -877,8 +926,17 @@ a {
 }
 .body-header__phone-link {
   color: #ffffff;
-  font-size: 18px;
   white-space: nowrap;
+}
+@supports (font-size: clamp( 1.0714285714rem , 1.0408163265rem  +  0.1339285714vw , 1.2857142857rem )) {
+  .body-header__phone-link {
+    font-size: clamp( 1.0714285714rem , 1.0408163265rem  +  0.1339285714vw , 1.2857142857rem );
+  }
+}
+@supports not (font-size: clamp( 1.0714285714rem , 1.0408163265rem  +  0.1339285714vw , 1.2857142857rem )) {
+  .body-header__phone-link {
+    font-size: calc(1.0714285714rem + 0.2142857143 * (100vw - 22.8571428571rem) / 162.8571428571);
+  }
 }
 @media (any-hover: hover) {
   .body-header__phone-link:hover {
@@ -890,6 +948,9 @@ a {
   font-weight: 700;
   font-size: 14px;
 }
+.body-header__burger {
+  flex: 1 1 30px;
+}
 
 .catalog-header {
   min-height: 50px;
@@ -898,7 +959,7 @@ a {
   display: flex;
   align-items: center;
 }
-@media (max-width: 105.7142857143em) {
+@media (max-width: 1480px) {
   .catalog-header {
     display: none;
   }
@@ -907,7 +968,7 @@ a {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 90em) {
+@media (max-width: 1480px) {
   .catalog-header__menu {
     flex-direction: column;
   }
@@ -929,6 +990,11 @@ a {
 }
 .catalog-header__link-text._sub-menu-active {
   color: #be1622;
+}
+@media (max-width: 1480px) {
+  .catalog-header__link-text {
+    color: #ffffff;
+  }
 }
 .catalog-header__link-icon {
   padding-bottom: 38px;
@@ -1054,14 +1120,14 @@ a {
   text-align: center;
   margin-bottom: 28px;
 }
-@supports (font-size: clamp( 3rem , 2.7755102041rem  +  0.9821428571vw , 4.5714285714rem )) {
+@supports (font-size: clamp( 2.4285714286rem , 2.1224489796rem  +  1.3392857143vw , 4.5714285714rem )) {
   .title-white {
-    font-size: clamp( 3rem , 2.7755102041rem  +  0.9821428571vw , 4.5714285714rem );
+    font-size: clamp( 2.4285714286rem , 2.1224489796rem  +  1.3392857143vw , 4.5714285714rem );
   }
 }
-@supports not (font-size: clamp( 3rem , 2.7755102041rem  +  0.9821428571vw , 4.5714285714rem )) {
+@supports not (font-size: clamp( 2.4285714286rem , 2.1224489796rem  +  1.3392857143vw , 4.5714285714rem )) {
   .title-white {
-    font-size: calc(3rem + 1.5714285714 * (100vw - 22.8571428571rem) / 162.8571428571);
+    font-size: calc(2.4285714286rem + 2.1428571429 * (100vw - 22.8571428571rem) / 162.8571428571);
   }
 }
 
@@ -1217,7 +1283,7 @@ a {
 }
 .guarantees__icon-block-text {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.4285714286rem;
   line-height: 100%;
   text-align: center;
   letter-spacing: 0.01em;

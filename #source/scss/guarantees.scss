@@ -1,6 +1,4 @@
 .guarantees {
-
-    min-height: 950px;
     background: $color-gradient;
     @include adaptiveValue("padding-top", 130, 80);
     @include adaptiveValue("padding-bottom", 117, 80);
@@ -28,18 +26,37 @@
     // .guarantees__icon-block-row
 
     &__icon-block-row {
-        @media (max-width: em(576)) {
-            display: flex;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        gap: 20px;
+        justify-content: space-between;
+        @media (max-width: 750px) {
+            grid-template-columns: repeat(3, auto);
             justify-content: center;
+        }
+        @media (max-width: 500px) {
+            grid-template-columns: repeat(2, auto);
+        }
+        @media (max-width: 360px) {
+            grid-template-columns: repeat(1, auto);
         }
     }
 
     // .guarantees__icon-block-item
 
     &__icon-block-item {
-        display: inline-grid;
+        display: grid;
+        gap: 10px;
         grid-template-rows: 205px auto;
-        @media (max-width: em(576)) {
+        @media (max-width: 1200px) {
+            grid-template-rows: 160px auto;
+        }
+        @media (max-width: 750px) {
+            grid-template-rows: 100px auto;
+        }
+        @media (max-width: 576px) {
+            max-width: 160px;
+            grid-template-rows: 80px auto;
             &:not(:last-child) {
                 padding-bottom: 20px;
             }
@@ -57,17 +74,22 @@
     &__icon-block-img {
         // margin: 0 auto;
         vertical-align: bottom;
+        @include adaptiveValue("max-width", 135, 70);
+        @include adaptiveValue("max-height", 100, 60);
     }
 
     // .guarantees__icon-block-text
 
     &__icon-block-text {
         font-weight: 600;
-        font-size: rem(20);
         line-height: 100%;
         text-align: center;
         letter-spacing: 0.01em;
         color: $white;
+        @include adaptiveValue("font-size", 20, 16, 1600, 700, 1);
+        @media (max-width: 768px) {
+            font-weight: 500;
+        }
     }
 
     // .guarantees__title-description

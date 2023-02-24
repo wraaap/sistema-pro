@@ -7,13 +7,16 @@
     &__row {
         margin: 0 auto;
         max-width: 2560px;
-        @include adaptiveValue("min-height", 640, 540);
+        // @include adaptiveValue("min-height", 640, 540);
     }
 
     // .special-offer__left
 
     &__left {
         background: url(../img/home/offer/special-offer-1.jpg) bottom/cover no-repeat;
+        // display: flex;
+        // justify-content: flex-end;
+        // padding-right: 50px;
     }
 
     // .special-offer__right
@@ -24,9 +27,11 @@
     // .special-offer__body
 
     &__body {
-        @media (max-width: 575px) {
-            height: 480px;
-        }
+        @include adaptiveValue("padding-left", 172, 20, 1600, 1000,1);
+        @include adaptiveValue("padding-right", 172, 20, 1600, 1000,1);
+        // @media (max-width: 575px) {
+        //     height: 480px;
+        // }
     }
 
     // .special-offer__title
@@ -36,9 +41,9 @@
         letter-spacing: 0.01em;
         color: $white;
         // min-height: 347px;
-        @include adaptiveValue("font-size", 48, 32);
-        @include adaptiveValue("min-height", 347, 180);
-        @include adaptiveValue("margin-top", 85, 50);
+        @include adaptiveValue("font-size", 48, 28);
+        @include adaptiveValue("min-height", 347, 80);
+        @include adaptiveValue("margin-top", 85, 30);
     }
 
     // .special-offer__description
@@ -50,7 +55,12 @@
         &:not(:last-child) {
             margin-bottom: 29px;
         }
-        @include adaptiveValue("font-size", 36, 24);
-        @include adaptiveValue("min-height", 55, 125);
+        max-width: 550px;
+        @include adaptiveValue("font-size", 36, 18);
+        @include adaptiveValue("min-height", 55, 80);
+    }
+
+    &__button {
+        @include adaptiveValue("margin-bottom", 63, 40);
     }
 }

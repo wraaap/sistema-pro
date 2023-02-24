@@ -39,7 +39,7 @@
     <div class="header__body body-header">
         <div class="body-header__container container">
             <div class="body-header__row row align-items-center">
-                <a class="body-header__logo col-5 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <a class="body-header__logo col-5 col-sm-6 col-md-6 col-lg-6 col-xl-3">
                     <img class="img-fluid" src="img/logo.svg" alt="">
                 </a>
                 <nav class="body-header__menu col-auto menu">
@@ -63,7 +63,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="body-header__phone col-5 col-sm-5 col-md-5 col-lg-auto">
+                <div class="body-header__phone col-5 col-sm-5 col-md-5 col-lg-5 col-xl-auto">
                     <div class="body-header__phone-body">
                         <a href="tel:73842240021" class="body-header__phone-link">
                             +7 (3842) 24-00-21
@@ -80,20 +80,20 @@
     <div class="header__catalog catalog-header">
         <div class="catalog-header__container container">
             <div class="catalog-header__row row align-items-center">
-                <ul data-da=".body-header__menu,1399.98,1" class="catalog-header__menu">
+                <ul data-da=".body-header__menu,1199.98,1" class="catalog-header__menu">
                     <li class="catalog-header__item">
-                        <a href="" class="catalog-header__link">
+                        <a href="" data-parent="1" class="catalog-header__link">
                             <div data-parent="1" class="catalog-header__link-text">Металлические двери</div>
                             <div data-submenu="1" class="catalog-header__link-icon">
-                                <img src="img/icons/menu/menu-icon-01.svg" alt="">
+                                <img data-submenu="1" src="img/icons/menu/menu-icon-01.svg" alt="">
                             </div>
                         </a>
                     </li>
                     <li class="catalog-header__item">
-                        <a href="" class="catalog-header__link">
+                        <a data-parent="2" href="" class="catalog-header__link">
                             <div data-parent="2" class="catalog-header__link-text">Деревянные двери</div>
                             <div data-submenu="2" class="catalog-header__link-icon">
-                                <img src="img/icons/menu/menu-icon-02.svg" alt="">
+                                <img data-submenu="2" src="img/icons/menu/menu-icon-02.svg" alt="">
                             </div>
                         </a>
                     </li>
@@ -101,7 +101,7 @@
                         <a href="" class="catalog-header__link">
                             <div data-parent="3" class="catalog-header__link-text">Светопрозрачные конструкции</div>
                             <div data-submenu="3" class="catalog-header__link-icon">
-                                <img src="img/icons/menu/menu-icon-03.svg" alt="">
+                                <img data-submenu="3" src="img/icons/menu/menu-icon-03.svg" alt="">
                             </div>
                         </a>
                     </li>
@@ -109,7 +109,7 @@
                         <a href="" class="catalog-header__link">
                             <div data-parent="4" class="catalog-header__link-text">Эвакуационные выходы</div>
                             <div data-submenu="4" class="catalog-header__link-icon">
-                                <img src="img/icons/menu/menu-icon-04.svg" alt="">
+                                <img data-submenu="4" src="img/icons/menu/menu-icon-04.svg" alt="">
                             </div>
                         </a>
                     </li>
@@ -117,7 +117,7 @@
                         <a href="" class="catalog-header__link">
                             <div data-parent="5" class="catalog-header__link-text">Фурнитура</div>
                             <div data-submenu="5" class="catalog-header__link-icon">
-                                <img src="img/icons/menu/menu-icon-05.svg" alt="">
+                                <img data-submenu="5" src="img/icons/menu/menu-icon-05.svg" alt="">
                             </div>
                         </a>
                     </li>
@@ -125,7 +125,7 @@
                         <a href="" class="catalog-header__link">
                             <div data-parent="6" class="catalog-header__link-text">Доводчики</div>
                             <div data-submenu="6" class="catalog-header__link-icon">
-                                <img src="img/icons/menu/menu-icon-06.svg" alt="">
+                                <img data-submenu="6" src="img/icons/menu/menu-icon-06.svg" alt="">
                             </div>
                         </a>
                     </li>
@@ -151,20 +151,22 @@
     </div>
 </section><section class="special-offer">
     <div class="special-offer__row row">
-        <div class="special-offer__left col-12 col-sm-6">
-            <div class="special-offer__body col-8 offset-md-2">
+        <div class="special-offer__left col-12 col-md-6">
+            <!-- <div class="special-offer__body col-10 col-sm-10 col-md-10 col-lg-10 col-xl-8 col-xxl-8 offset-xl-2"> -->
+            <div class="special-offer__body">
                 <div class="special-offer__title">Без паники! <br>
                     У нас своя система (УТП)</div>
                 <div class="special-offer__description">Комплектуем эвакуационные двери системой “АНТИПАНИКА”</div>
-                <button class="button button-dark">Заказать</button>
+                <button class="special-offer__button button button-dark">Заказать</button>
             </div>
         </div>
-        <div class="special-offer__right col-12 col-sm-6">
-            <div class="special-offer__body col-8 offset-md-2">
+        <div class="special-offer__right col-12 col-md-6">
+            <!-- <div class="special-offer__body col-7 offset-md-2"> -->
+            <div class="special-offer__body">
                 <div class="special-offer__title">Доставка и монтаж</div>
                 <div class="special-offer__description">Привезем и установим
                     всю реализуемую продукцию</div>
-                <button class="button button-red">Заказать</button>
+                <button class="special-offer__button button button-red">Заказать</button>
             </div>
         </div>
     </div>
@@ -172,32 +174,37 @@
     <div class="guarantees__container container">
         <div class="guarantees__title">
             <h2 class="guarantees__title-value title-white">Гарантия вашей безопасности - это</h2>
-            <div class="guarantees__icon-block-row row">
-                <div class="guarantees__icon-block-item col-8 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-1">
+            <div class="guarantees__icon-block-row">
+                <!-- <div class="guarantees__icon-block-item col-8 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-1"> -->
+                <div class="guarantees__icon-block-item">
                     <div class="guarantees__icon-block-img-container">
                         <img class="guarantees__icon-block-img img-fluid" src="img/icons/guarantees/guarantees-icon-01.svg" alt="">
                     </div>
                     <div class="guarantees__icon-block-text">Сотни довольных клиентов</div>
                 </div>
-                    <div class="guarantees__icon-block-item col-8 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 ">
+                    <!-- <div class="guarantees__icon-block-item col-8 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 "> -->
+                    <div class="guarantees__icon-block-item">
                         <div class="guarantees__icon-block-img-container">
                         <img class="guarantees__icon-block-img img-fluid" src="img/icons/guarantees/guarantees-icon-02.svg" alt="">
                     </div>
                     <div class="guarantees__icon-block-text">Работаем с государственными учреждениями</div>
                 </div>
-                    <div class="guarantees__icon-block-item col-8 col-sm-6 col-md-4 col-lg-2 col-xl-2  col-xxl-2 ">
+                    <!-- <div class="guarantees__icon-block-item col-8 col-sm-6 col-md-4 col-lg-2 col-xl-2  col-xxl-2 "> -->
+                    <div class="guarantees__icon-block-item">
                         <div class="guarantees__icon-block-img-container">
                         <img class="guarantees__icon-block-img img-fluid" src="img/icons/guarantees/guarantees-icon-03.png" alt="">
                     </div>
                     <div class="guarantees__icon-block-text">Высокое качество материалов</div>
                 </div>
-                    <div class="guarantees__icon-block-item col-8 col-sm-6 col-md-4 col-lg-2 col-xl-2  col-xxl-2 ">
+                    <!-- <div class="guarantees__icon-block-item col-8 col-sm-6 col-md-4 col-lg-2 col-xl-2  col-xxl-2 "> -->
+                    <div class="guarantees__icon-block-item">
                         <div class="guarantees__icon-block-img-container">
                         <img class="guarantees__icon-block-img img-fluid" src="img/icons/guarantees/guarantees-icon-04.svg" alt="">
                     </div>
                     <div class="guarantees__icon-block-text">Строгое соблюдение сроков</div>
                 </div>
-                    <div class="guarantees__icon-block-item col-8 col-sm-6 col-md-4 col-lg-3 col-xl-3  col-xxl-2 ">
+                    <!-- <div class="guarantees__icon-block-item col-8 col-sm-6 col-md-4 col-lg-3 col-xl-3  col-xxl-2 "> -->
+                    <div class="guarantees__icon-block-item">
                         <div class="guarantees__icon-block-img-container">
                         <img class="guarantees__icon-block-img img-fluid" src="img/icons/guarantees/guarantees-icon-05.svg" alt="">
                     </div>
@@ -247,57 +254,57 @@
     <div class="production__container container">
         <h2 class="production__title title-white">Сделаем по вашим размерам:</h2>
         <div class="production__row row">
-            <div class="production__item col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="production__item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                 <div class="production__item-img-cnt">
-                    <img class="production__item-img img-fluid" src="img/home/production/production-01.jpg" alt="">
+                    <a href=""><img class="production__item-img img-fluid" src="img/home/production/production-01.jpg" alt=""></a>
                 </div>
                 <a href="" class="production__item-title">Металлические противопожарные двери</a>
                 <a href="" class="production__item-category">Однопольные</a>
                 <a href="" class="production__item-category">Двупольные</a>
             </div>
-            <div class="production__item col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="production__item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                 <div class="production__item-img-cnt">
-                    <img class="production__item-img img-fluid" src="img/home/production/production-02.jpg" alt="">
+                    <a href=""><img class="production__item-img img-fluid" src="img/home/production/production-02.jpg" alt=""></a>
                 </div>
                 <a href="" class="production__item-title">Деревянные противопожарные двери</a>
                 <a href="" class="production__item-category">Однопольные</a>
                 <a href="" class="production__item-category">Двупольные</a>
             </div>
-            <div class="production__item col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="production__item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                 <div class="production__item-img-cnt">
-                    <img class="production__item-img img-fluid" src="img/home/production/production-03.jpg" alt="">
+                    <a href=""><img class="production__item-img img-fluid" src="img/home/production/production-03.jpg" alt=""></a>
                 </div>
                 <a href="" class="production__item-title">Противопожарные люки</a>
             </div>
-            <div class="production__item col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="production__item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                 <div class="production__item-img-cnt">
-                    <img class="production__item-img img-fluid" src="img/home/production/production-04.jpg" alt="">
+                    <a href=""><img class="production__item-img img-fluid" src="img/home/production/production-04.jpg" alt=""></a>
                 </div>
                 <a href="" class="production__item-title">Технические двери</a>
                 <a href="" class="production__item-category">Однопольные</a>
                 <a href="" class="production__item-category">Двупольные</a>
             </div>
-            <div class="production__item col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="production__item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                 <div class="production__item-img-cnt">
-                    <img class="production__item-img img-fluid" src="img/home/production/production-05.jpg" alt="">
+                    <a href=""><img class="production__item-img img-fluid" src="img/home/production/production-05.jpg" alt=""></a>
                 </div>
                 <a href="" class="production__item-title">Металлические противопожарные двери</a>
             </div>
-            <div class="production__item col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="production__item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                 <div class="production__item-img-cnt">
-                    <img class="production__item-img img-fluid" src="img/home/production/production-06.jpg" alt="">
+                    <a href=""><img class="production__item-img img-fluid" src="img/home/production/production-06.jpg" alt=""></a>
                 </div>
                 <a href="" class="production__item-title">Деревянные противопожарные двери</a>
             </div>
-            <div class="production__item col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="production__item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                 <div class="production__item-img-cnt">
-                    <img class="production__item-img img-fluid" src="img/home/production/production-07.jpg" alt="">
+                    <a href=""><img class="production__item-img img-fluid" src="img/home/production/production-07.jpg" alt=""></a>
                 </div>
                 <a href="" class="production__item-title">Противопожарные люки</a>
             </div>
-            <div class="production__item col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="production__item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                 <div class="production__item-img-cnt">
-                    <img class="production__item-img img-fluid" src="img/home/production/production-08.jpg" alt="">
+                    <a href=""><img class="production__item-img img-fluid" src="img/home/production/production-08.jpg" alt=""></a>
                 </div>
                 <a href="" class="production__item-title">Технические двери</a>
             </div>
@@ -305,25 +312,25 @@
     </div>
 </section><section class="add-service">
     <div class="add-service__container container">
-        <h2 class="add-service__title">Не только производство:</h2>
+        <h2 class="add-service__title title-grey">Не только производство:</h2>
         <div class="add-service__row row">
-            <div class="add-service__item col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="add-service__item col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                 <div class="add-service__item-img">
-                    <img class="img-fluid" src="img/home/service/add-service-01.jpg" alt="">
+                    <a href=""><img class="img-fluid" src="img/home/service/add-service-01.jpg" alt=""></a>
                 </div>
                 <div class="add-service__item-title">Установка пожарной сигнализации</div>
                 <div class="add-service__item-text">Для любых помещений: склады, офисы, учреждения или в частный дом</div>
             </div>
-            <div class="add-service__item col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="add-service__item col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                 <div class="add-service__item-img">
-                    <img class="img-fluid" src="img/home/service/add-service-02.jpg" alt="">
+                   <a href=""><img class="img-fluid" src="img/home/service/add-service-02.jpg" alt=""></a>
                 </div>
                 <div class="add-service__item-title">Монтаж системы видеонаблюдения</div>
                 <div class="add-service__item-text">Для любых помещений и территорий: склады, офисы, учреждения или в частный дом</div>
             </div>
-            <div class="add-service__item col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="add-service__item col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                 <div class="add-service__item-img">
-                    <img class="img-fluid" src="img/home/service/add-service-03.jpg" alt="">
+                    <a href=""><img class="img-fluid" src="img/home/service/add-service-03.jpg" alt=""></a>
                 </div>
                 <div class="add-service__item-title">Железные ворота</div>
                 <div class="add-service__item-text">Для любых территорий: в гаражный кооператив, для личного использования, для производств и складов</div>
@@ -348,37 +355,37 @@
 </section><section class="trust">
     <div class="trust__container container">
         <div class="trust__title title">
-            <h2 class="title-value">Нам доверяют</h2>
-            <div class="title-description">компании и учреждения</div>
+            <h2 class="trust__title-value title-value title-grey">Нам доверяют</h2>
+            <div class="trust__title-description">компании и учреждения</div>
         </div>
         <div class="trust__slider trust-swiper">
             <div class="trust__wrapper swiper-wrapper">
                 <div class="trust__slide swiper-slide">
-                    <img class="img-fluid" src="img/logo-01.png" alt="">
+                    <a href=""><img class="img-fluid" src="img/logo-01.png" alt=""></a>
                 </div>
                 <div class="trust__slide swiper-slide">
-                    <img class="img-fluid" src="img/logo-02.png" alt="">
+                    <a href=""><img class="img-fluid" src="img/logo-02.png" alt=""></a>
                 </div>
                 <div class="trust__slide swiper-slide">
-                    <img class="img-fluid" src="img/logo-03.png" alt="">
+                    <a href=""><img class="img-fluid" src="img/logo-03.png" alt=""></a>
                 </div>
                 <div class="trust__slide swiper-slide">
-                    <img class="img-fluid" src="img/logo-04.png" alt="">
+                    <a href=""><img class="img-fluid" src="img/logo-04.png" alt=""></a>
                 </div>
                 <div class="trust__slide swiper-slide">
-                    <img class="img-fluid" src="img/logo-05.png" alt="">
+                    <a href=""><img class="img-fluid" src="img/logo-05.png" alt=""></a>
                 </div>
                 <div class="trust__slide swiper-slide">
-                    <img class="img-fluid" src="img/logo-06.png" alt="">
+                    <a href=""><img class="img-fluid" src="img/logo-06.png" alt=""></a>
                 </div>
                 <div class="trust__slide swiper-slide">
-                    <img class="img-fluid" src="img/logo-01.png" alt="">
+                    <a href=""><img class="img-fluid" src="img/logo-01.png" alt=""></a>
                 </div>
                 <div class="trust__slide swiper-slide">
-                    <img class="img-fluid" src="img/logo-02.png" alt="">
+                    <a href=""><img class="img-fluid" src="img/logo-02.png" alt=""></a>
                 </div>
                 <div class="trust__slide swiper-slide">
-                    <img class="img-fluid" src="img/logo-03.png" alt="">
+                    <a href=""><img class="img-fluid" src="img/logo-03.png" alt=""></a>
                 </div>
             </div>
             <div class="trust-swiper-pagination swiper-pagination"></div>
@@ -393,10 +400,11 @@
                 <a class="footer__logo">
                     <img class="img-fluid" src="img/logo.svg" alt="">
                 </a>
-                <div class="footer__form">
-                    <input class="footer__form-input" type="text">
-                    <button class="footer__form-button">Отправить</button>
-                </div>
+                <form action="#" class="footer__form">
+                    <input class="footer__form-input" type="text" name="name" placeholder="Имя">
+                    <input class="footer__form-input" type="phone" name="phone" placeholder="Телефон">
+                    <button class="footer__form-button button button-red" type="submit">Отправить</button>
+                </form>
                 <ul class="footer__social">
                     <li class="footer__social-item">
                         <a href="" class="footer__social-link">
@@ -427,7 +435,7 @@
                 <span class="footer__copy">Копирайт © 2022 Система Про. Все права защищены. Сайт от МЕДИАТИП</span>
             </div>
             <div class="footer__menu col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 col-xxl-8">
-                <div class="footer__item col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="footer__item col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
                     <div class="footer__item-spoller">
                         <div type="button"  data-spoller class="footer__item-spoller-title">О компании</div>
                         <nav class="menu-footer">
@@ -448,7 +456,7 @@
                         </nav>
                     </div>
                 </div>
-                <div class="footer__item col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="footer__item col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
                     <div class="footer__item-spoller">
                         <div class="footer__item-spoller-title">Услуги</div>
                         <nav class="menu-footer">
@@ -469,7 +477,7 @@
                         </nav>
                     </div>
                 </div>
-                <div class="footer__item col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="footer__item col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
                     <div class="footer__item-spoller">
                         <div class="footer__item-spoller-title">Продукция</div>
                         <nav class="menu-footer">
@@ -490,7 +498,7 @@
                         </nav>
                     </div>
                 </div>
-                <div class="footer__item col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="footer__item col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
                     <div class="footer__item-spoller">
                         <div class="footer__item-spoller-title">Правила</div>
                         <nav class="menu-footer">

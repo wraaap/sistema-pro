@@ -305,7 +305,7 @@ const heroSwiper = new Swiper(".hero-swiper", {
     slidesPerGroup: 1,
     simulateTouch: true,
     spaceBetween: 0,
-    watchOverflow: false,
+    watchoverflow: true,
     pagination: {
         el: ".hero-swiper-pagination",
         clickable: true,
@@ -333,75 +333,71 @@ if ($(window).width() > 991) {
 // function colorBind()
 const elements = document.querySelectorAll(".colorbind");
 let hoverPair = "";
+function colorBindToggle(e, cl) {
+    for (let i = 0; i < e.length; i++) {
+        if (e[i].dataset.colorbind == hoverPair) {
+            e[i].classList.toggle(cl);
+        }
+    };
+}
 for (let i = 0; i < elements.length; i++) {
   elements[i].addEventListener("mouseover", function() {
     hoverPair = elements[i].dataset.colorbind;
-    for (let i = 0; i < elements.length; i++) {
-        if (elements[i].dataset.colorbind == hoverPair) {
-            elements[i].classList.toggle("highlight-red");
-        }
-    };
+    colorBindToggle(elements, "highlight-red");
   });
   elements[i].addEventListener("mouseout", function() {
     // elements[i].classList.toggle("highlight-red");
-    for (let i = 0; i < elements.length; i++) {
-        if (elements[i].dataset.colorbind == hoverPair) {
-            elements[i].classList.toggle("highlight-red");
-        }
-    };
+    colorBindToggle(elements, "highlight-red");
 })}
 
 // Открывающееся меню ========================================================================================================================================================
 
-document.addEventListener("click", documentActions);
-
-function documentActions(e) {
-    const targetElement = e.target;
-    if (targetElement.closest('[data-parent]')) {
-        const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
-        const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
-        const subMenuAll = document.querySelectorAll('[data-submenu]');
-        const activeLink = document.querySelector('._sub-menu-active');
-        const activeBlock = document.querySelector('._sub-menu-open');
-        
-        if (activeLink && activeLink !== targetElement) {
-            activeLink.classList.remove('_sub-menu-active');
-            activeBlock.classList.remove('_sub-menu-open');
-            document.documentElement.classList.remove('sub-menu-open');
-            for (let i = 0; i < subMenuAll.length; i++) {
-                subMenuAll[i].classList.remove('_sub-menu-open-active');
-            };
-        }
-    
-        document.documentElement.classList.add('sub-menu-open');
-        targetElement.classList.add('_sub-menu-active');
-        subMenu.classList.add('_sub-menu-open-active');
-        for (let i = 0; i < subMenuAll.length; i++) {
-            subMenuAll[i].classList.add('_sub-menu-open');
-        };
-        if (activeLink == targetElement) {
-            activeLink.classList.remove('_sub-menu-active');
-            activeBlock.classList.remove('_sub-menu-open');
-            document.documentElement.classList.remove('sub-menu-open');
-            for (let i = 0; i < subMenuAll.length; i++) {
-                subMenuAll[i].classList.remove('_sub-menu-open-active');
-                subMenuAll[i].classList.remove('_sub-menu-open');
-            };
-        }
-        e.preventDefault();
-    }
+document.querySelector('.catalog-header__menu').onmouseenter = function(event) { // отлавливаем наведение мыши на всё меню '.catalog-header__menu'
+    const subMenuAll = document.querySelectorAll('[data-submenu]'); // собираем в массив все скрытые элемены
+    for (let i = 0; i < subMenuAll.length; i++) { // обходим массив со всеми скрытыми элементами
+        subMenuAll[i].classList.add('_sub-menu-open'); // добавляем скрытым элементам класс '_sub-menu-open'
+    };
 }
 
+document.querySelector('.catalog-header__menu').onmouseleave = function(event) { // отлавливаем уход мыши с всего меню '.catalog-header__menu'
+    const subMenuAll = document.querySelectorAll('[data-submenu]'); // собираем в массив все открытые элемены
+    const menuAll = document.querySelectorAll('[data-parent]'); // собираем в массив все элемены меню
+    for (let i = 0; i < subMenuAll.length; i++) { // обходим массив со всеми открытыми элементами
+        subMenuAll[i].classList.remove('_sub-menu-open'); // удаляем у открытых элементов класс '_sub-menu-open'
+    };
+    for (let i = 0; i < menuAll.length; i++) { // обходим массив со всеми открытыми элементами
+        menuAll[i].parentElement.classList.remove('parent-active');
+    };
+}
+
+let allMenu = document.querySelectorAll('.catalog-header__item');
+    for (let i = 0; i < allMenu.length; i++) {
+        allMenu[i].onmouseover = function(event) { // отлавливаем наведение мыши на блок в меню '.catalog-header__item'
+            let targetElement = event.target;
+            let menuAll = document.querySelectorAll('[data-parent]'); // собираем в массив все элемены меню
+            let activeLink = document.querySelector('.parent-active'); // находим активный вложенный элемент
+            if (targetElement.parentElement.nodeName == 'A') {
+                targetElement.parentElement.classList.add('parent-active');
+            }
+
+            if (activeLink && activeLink !== targetElement) {
+                for (let i = 0; i < menuAll.length; i++) {
+                    menuAll[i].parentElement.classList.remove('parent-active');
+                };
+            }
+    }
+}
 
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
 
 document.addEventListener("click", function (e) {
     if (e.target.closest('.icon-menu')) {
+        document.body.classList.toggle('_lock');
         document.documentElement.classList.toggle("menu-open");
     }
 }); 
 
-//========================================================================================================================================================
+// Динамический адаптив ========================================================================================================================================================
 
 "use strict";
 function DynamicAdapt(type) {

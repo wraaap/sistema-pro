@@ -32,7 +32,28 @@
         display: flex;
         justify-content: center;
     }
+
+    // .trust__title-value
+
+    &__title-value {
+    }
+
+    // .trust__title-description
+
+    &__title-description {
+        @include adaptiveValue("font-size", 32, 20);
+        font-weight: 300;
+        line-height: 37px;
+        color: #000;
+    }
 }
+.title-value {
+}
+.title-grey {
+}
+.title-description {
+}
+
 .trust-swiper {
 }
 .trust-swiper-pagination {

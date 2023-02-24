@@ -37,14 +37,14 @@
         line-height: 150%;
         letter-spacing: 0.01em;
         color: $white;
-        @include adaptiveValue("font-size", 20, 18);
-        @include adaptiveValue("margin-bottom", 65, 30);
+        @include adaptiveValue("font-size", 20, 16);
+        @include adaptiveValue("margin-bottom", 65, 25);
     }
 
     // .about__video
 
     &__video {
-        @media (max-width: em(992)) {
+        @media (max-width: 991.98px) {
             width: rem(580);
             height: rem(360);
             margin-left: auto;
@@ -56,5 +56,8 @@
         border-radius: 41px;
         width: 100%;
         height: 100%;
+        @media (max-width: 1499px) {
+            height: 92%;
+        }
     }
 }

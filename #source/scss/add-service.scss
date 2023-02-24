@@ -30,12 +30,21 @@
     &__item {
         @include adaptiveValue("padding", 50, 5);
         padding: 50px;
+        @media (max-width: 486px) {
+            width: 100%;
+        }
     }
 
     // .add-service__item-img
 
     &__item-img {
         margin-bottom: 50px;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
     }
 
     // .add-service__item-title

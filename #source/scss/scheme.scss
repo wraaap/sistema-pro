@@ -49,13 +49,14 @@
         align-items: center;
         cursor: pointer;
         position: absolute;
-        opacity: 0;
-        @include adaptiveValue("font-size", 27, 14);
+        font-weight: 500;
+        transition: all 0.3s ease 0s;
+        @include adaptiveValue("font-size", 27, 14, 1600, 769, 1);
+        @include adaptiveValue("font-size", 14, 10, 768, 320, 1);
         @media (any-hover: hover) {
             &:hover {
                 color: $white;
                 background-color: $color-red;
-                opacity: 1;
             }
         }
     }

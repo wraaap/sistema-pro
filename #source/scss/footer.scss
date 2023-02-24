@@ -13,6 +13,10 @@
     // .footer__row
 
     &__row {
+        @media (max-width: 767.98px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
 
     // .footer__contact
@@ -20,11 +24,6 @@
     &__contact {
         display: flex;
         flex-direction: column;
-        @media (max-width: em(768)) {
-            &:not(:last-child) {
-                margin-bottom: rem(30);
-            }
-        }
     }
 
     // .footer__logo
@@ -40,11 +39,19 @@
 
     &__form {
         margin-bottom: 57px;
+        display: grid;
+        gap: 20px;
     }
 
     // .footer__form-input
 
     &__form-input {
+        border: none;
+        border-radius: 0 !important;
+        background-color: $white;
+        padding: 10px;
+        height: 42px;
+        width: 100%;
     }
 
     // .footer__form-button
@@ -83,7 +90,10 @@
 
     &__menu {
         display: flex;
-        flex-wrap: wrap
+        flex-wrap: wrap;        
+        @media (max-width: em(768)) {
+            margin-bottom: rem(30);
+        }
     }
 
     // .footer__item
@@ -143,11 +153,15 @@
         letter-spacing: 0.01em;
         color: $white;
         opacity: 0.5;
+        transition: all 0.3s ease 0s;
         @media (any-hover: hover) {
             &:hover {
                 color: $white;
                 opacity: 0.7;
             }
+        }
+        @media (max-width: 500px) {
+            font-size: 16px;
         }
     }
 }

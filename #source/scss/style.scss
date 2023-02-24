@@ -54,6 +54,7 @@ button {
     padding: 0;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease 0s;
     @media (any-hover: hover) {
         &:hover {
             opacity: 0.8;
@@ -68,7 +69,40 @@ button {
 }
 
 .highlight-red {
-    background-color: $color-red;
+    color: $color-red;
+    &::marker {
+        color: $color-red;
+    }
+    &.scheme__img-circle {
+        color: $white;
+        background-color: $color-red;
+        opacity: 1;
+        &::marker {
+            background-color: $color-red;
+            color: $white;
+        }
+    }
+}
+
+.title-white {
     color: $white;
-    opacity: 1;
+    font-weight: 600;
+    // font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 28px;
+    @include adaptiveValue("font-size", 64, 32, 1600, 800, 1);
+}
+
+.title-grey {
+    color: $color-grafit;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    @include adaptiveValue("font-size", 64, 32, 1600, 800, 1);
+}
+body._lock {
+    overflow: hidden;
 }

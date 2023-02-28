@@ -57,6 +57,10 @@
     // .footer__form-button
 
     &__form-button {
+        padding: 10px;
+        height: 42px;
+        width: 100%;
+        @include adaptiveValue("font-size", 18, 16);
     }
 
     // .footer__social
@@ -139,7 +143,7 @@
 
     // .menu-footer__item
 
-    &__item {
+    & li {
         &:not(:last-child) {
             margin-bottom: 17px;
         }
@@ -147,7 +151,7 @@
 
     // .menu-footer__link
 
-    &__link {
+    & a {
         font-weight: 600;
         font-size: 14px;
         letter-spacing: 0.01em;

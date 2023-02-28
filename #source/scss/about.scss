@@ -27,7 +27,7 @@
 
     &__title-value {
         text-align: left;
-        @include adaptiveValue("margin-bottom", 63, 30);
+        @include adaptiveValue("margin-bottom", 63, 20);
     }
 
     // .about__description

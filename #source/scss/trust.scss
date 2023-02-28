@@ -31,6 +31,11 @@
         margin: 0 auto;
         display: flex;
         justify-content: center;
+        img {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
     }
 
     // .trust__title-value

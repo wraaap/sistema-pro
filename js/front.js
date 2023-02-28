@@ -286,7 +286,7 @@ const trustSwiper = new Swiper(".trust-swiper", {
             slidesPerView: 3,
             spaceBetween: 40,
         },
-        1250: {
+        1150: {
             slidesPerView: 4,
             spaceBetween: 50,
         },
@@ -350,43 +350,64 @@ for (let i = 0; i < elements.length; i++) {
     colorBindToggle(elements, "highlight-red");
 })}
 
-// Открывающееся меню ========================================================================================================================================================
+// // Открывающееся меню ========================================================================================================================================================
 
-document.querySelector('.catalog-header__menu').onmouseenter = function(event) { // отлавливаем наведение мыши на всё меню '.catalog-header__menu'
-    const subMenuAll = document.querySelectorAll('[data-submenu]'); // собираем в массив все скрытые элемены
-    for (let i = 0; i < subMenuAll.length; i++) { // обходим массив со всеми скрытыми элементами
-        subMenuAll[i].classList.add('_sub-menu-open'); // добавляем скрытым элементам класс '_sub-menu-open'
-    };
-}
+// document.querySelector('.catalog-header__menu').onmouseenter = function(event) { // отлавливаем наведение мыши на всё меню '.catalog-header__menu'
+//     const subMenuAll = document.querySelectorAll('[data-submenu]'); // собираем в массив все скрытые элемены
+//     for (let i = 0; i < subMenuAll.length; i++) { // обходим массив со всеми скрытыми элементами
+//         subMenuAll[i].classList.add('_sub-menu-open'); // добавляем скрытым элементам класс '_sub-menu-open'
+//     };
+// }
 
-document.querySelector('.catalog-header__menu').onmouseleave = function(event) { // отлавливаем уход мыши с всего меню '.catalog-header__menu'
-    const subMenuAll = document.querySelectorAll('[data-submenu]'); // собираем в массив все открытые элемены
-    const menuAll = document.querySelectorAll('[data-parent]'); // собираем в массив все элемены меню
-    for (let i = 0; i < subMenuAll.length; i++) { // обходим массив со всеми открытыми элементами
-        subMenuAll[i].classList.remove('_sub-menu-open'); // удаляем у открытых элементов класс '_sub-menu-open'
-    };
-    for (let i = 0; i < menuAll.length; i++) { // обходим массив со всеми открытыми элементами
-        menuAll[i].parentElement.classList.remove('parent-active');
-    };
-}
+// document.querySelector('.catalog-header__menu').onmouseleave = function(event) { // отлавливаем уход мыши с всего меню '.catalog-header__menu'
+//     const subMenuAll = document.querySelectorAll('[data-submenu]'); // собираем в массив все открытые элемены
+//     const menuAll = document.querySelectorAll('[data-parent]'); // собираем в массив все элемены меню
+//     for (let i = 0; i < subMenuAll.length; i++) { // обходим массив со всеми открытыми элементами
+//         subMenuAll[i].classList.remove('_sub-menu-open'); // удаляем у открытых элементов класс '_sub-menu-open'
+//     };
+//     for (let i = 0; i < menuAll.length; i++) { // обходим массив со всеми открытыми элементами
+//         menuAll[i].parentElement.classList.remove('parent-active');
+//     };
+// }
 
-let allMenu = document.querySelectorAll('.catalog-header__item');
-    for (let i = 0; i < allMenu.length; i++) {
-        allMenu[i].onmouseover = function(event) { // отлавливаем наведение мыши на блок в меню '.catalog-header__item'
-            let targetElement = event.target;
-            let menuAll = document.querySelectorAll('[data-parent]'); // собираем в массив все элемены меню
-            let activeLink = document.querySelector('.parent-active'); // находим активный вложенный элемент
-            if (targetElement.parentElement.nodeName == 'A') {
-                targetElement.parentElement.classList.add('parent-active');
-            }
+// // console.log(document.querySelector('.catalog-header__menu').children);        
+// let allMenu = document.querySelector('.catalog-header__menu').children; // отлавливаем наведение мыши на блок в меню '.catalog-header__item'
+//     for (const menu of allMenu) {
+//         menu.addEventListener('mouseover', e => {
+//             let targetElement = e.target;
+//             let menuAll = document.querySelectorAll('[data-parent]'); // собираем в массив все элемены меню
+//             let activeLink = document.querySelector('.parent-active'); // находим активный вложенный элемент
+//             if (targetElement.parentElement.nodeName == 'A') {
+//                 targetElement.parentElement.classList.add('parent-active');
+//             }
 
-            if (activeLink && activeLink !== targetElement) {
-                for (let i = 0; i < menuAll.length; i++) {
-                    menuAll[i].parentElement.classList.remove('parent-active');
-                };
-            }
-    }
-}
+//             if (activeLink && activeLink !== targetElement) {
+//                 for (let i = 0; i < menuAll.length; i++) {
+//                     menuAll[i].parentElement.classList.remove('parent-active');
+//                 };
+//             }
+//         });
+//       }
+    
+
+
+// let allMenu = document.querySelectorAll('.catalog-header__item');
+//     for (let i = 0; i < allMenu.length; i++) {
+//         allMenu[i].onmouseover = function(event) { // отлавливаем наведение мыши на блок в меню '.catalog-header__item'
+//             let targetElement = event.target;
+//             let menuAll = document.querySelectorAll('[data-parent]'); // собираем в массив все элемены меню
+//             let activeLink = document.querySelector('.parent-active'); // находим активный вложенный элемент
+//             if (targetElement.parentElement.nodeName == 'A') {
+//                 targetElement.parentElement.classList.add('parent-active');
+//             }
+
+//             if (activeLink && activeLink !== targetElement) {
+//                 for (let i = 0; i < menuAll.length; i++) {
+//                     menuAll[i].parentElement.classList.remove('parent-active');
+//                 };
+//             }
+//     }
+// }
 
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
 

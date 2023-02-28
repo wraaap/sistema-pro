@@ -133,6 +133,6 @@
         line-height: 200%;
         letter-spacing: 0.01em;
         color: $white;
-        @include adaptiveValue("font-size", 24, 18);
+        @include adaptiveValue("font-size", 24, 16);
     }
 }

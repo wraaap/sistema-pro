@@ -1,7 +1,7 @@
 .guarantees {
     background: $color-gradient;
-    @include adaptiveValue("padding-top", 130, 80);
-    @include adaptiveValue("padding-bottom", 117, 80);
+    @include adaptiveValue("padding-top", 130, 50);
+    @include adaptiveValue("padding-bottom", 117, 50);
 
     // .guarantees__container
 
@@ -58,7 +58,7 @@
             max-width: 160px;
             grid-template-rows: 80px auto;
             &:not(:last-child) {
-                padding-bottom: 20px;
+                padding-bottom: 10px;
             }
         }
     }
@@ -101,7 +101,7 @@
         font-weight: 600;
         line-height: 120%;
         letter-spacing: 0.01em;
-        @include adaptiveValue("margin-top", 135, 80);
-        @include adaptiveValue("font-size", 20, 18);
+        @include adaptiveValue("margin-top", 135, 50);
+        @include adaptiveValue("font-size", 20, 16);
     }
 }

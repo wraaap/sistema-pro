@@ -75,12 +75,12 @@ body {
 }
 
 .container {
-    // @media (min-width: 1200px) and (max-width: 1920px) {
-    //     max-width: 80%;
-    // }
-    // @media (min-width: 1921px) {
-    //     max-width: 1860px;
-    // }
+    @media (min-width: 1200px) and (max-width: 1920px) {
+        max-width: 80%;
+    }
+    @media (min-width: 1921px) {
+        max-width: 1860px;
+    }
 }
 
 .navbar-brand {
@@ -194,4 +194,108 @@ a {
             background-color: #737373;
         }
     }
+}
+
+
+
+.title {
+    &-value {
+        font-weight: 600;
+        color: $color-grafit;
+        font-size: 64px;
+    }
+    &-description {
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 37px;
+        color: #000;
+    }
+
+}
+input,
+button,
+textarea {
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+    border: none;
+}
+.button {
+    // width: 255px;
+    // height: 55px;
+    // font-size: 24px;
+    color: $white;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    @include adaptiveValue("font-size", 24, 16);
+    @include adaptiveValue("width", 255, 180);
+    @include adaptiveValue("height", 55, 42);
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+.button-red {
+    background-color: $color-red;
+}
+.button-dark {
+    background-color: $black;
+}
+
+.highlight-red {
+    color: $color-red;
+    transition: all 0.3s ease 0s;
+    &::marker {
+        color: $color-red;
+        transition: all 0.3s ease 0s;
+    }
+    &.scheme__img-circle {
+        color: $white;
+        background-color: $color-red;
+        opacity: 1;
+        transition: all 0.3s ease 0s;
+        &::marker {
+            background-color: $color-red;
+            color: $white;
+            transition: all 0.3s ease 0s;
+        }
+    }
+}
+
+li.highlight-red{
+    color: $color-red;
+    transition: all 0.3s ease 0s;
+}
+
+.title-white {
+    color: $white;
+    font-weight: 600;
+    // font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 28px;
+    // @include adaptiveValue("font-size", 64, 32, 1600, 800, 1);
+    @include adaptiveValue("font-size", 48, 28);
+}
+
+.title-grey {
+    color: $color-grafit;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    // @include adaptiveValue("font-size", 64, 32, 1600, 800, 1);
+    @include adaptiveValue("font-size", 48, 28);
+}
+body._lock {
+    overflow: hidden;
 }

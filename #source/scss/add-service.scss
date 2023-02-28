@@ -1,8 +1,8 @@
 .add-service {
 
     background-color: $white;
-    @include adaptiveValue("padding-top", 130, 80);
-    @include adaptiveValue("padding-bottom", 130, 80);
+    @include adaptiveValue("padding-top", 130, 50);
+    @include adaptiveValue("padding-bottom", 130, 50);
 
     // .add-service__container
 
@@ -13,11 +13,10 @@
 
     &__title {
         font-weight: 600;
-        font-size: 48px;
         line-height: 100%;
         letter-spacing: 0.01em;
         color: $color-grafit;
-        margin-bottom: 55px;
+        @include adaptiveValue("margin-bottom", 55, 20);
     }
 
     // .add-service__row
@@ -39,10 +38,18 @@
 
     &__item-img {
         margin-bottom: 50px;
+        @include adaptiveValue("margin-bottom", 50, 20);
         transition: all 0.3s ease 0s;
-        @media (any-hover: hover) {
-            &:hover {
-                transform: scale(1.1);
+        a {
+            display: block;
+            overflow: hidden;
+            height: 100%;
+        }
+        img {
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
     }
@@ -54,8 +61,14 @@
         font-size: 24px;
         line-height: 100%;
         letter-spacing: 0.01em;
+        display: block;
         color: $color-black;
         margin-bottom: 11px;
+        cursor: pointer;
+        &:hover {
+            color: $color-black;
+            opacity: 0.8;
+        }
     }
 
     // .add-service__item-text

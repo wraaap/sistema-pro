@@ -1,8 +1,8 @@
 .production {
 
     background-color: $color-grey;
-    @include adaptiveValue("padding-top", 130, 80);
-    @include adaptiveValue("padding-bottom", 130, 80);
+    @include adaptiveValue("padding-top", 130, 50);
+    @include adaptiveValue("padding-bottom", 130, 50);
 
     // .production__container
 
@@ -45,12 +45,20 @@
     &__item-img-cnt {
         margin-bottom: 30px;
         overflow: hidden;
+        // height: 100%;
         border-radius: 0px 0px 0px 88.5484px;
         transition: all 0.3s ease 0s;
-        @media (any-hover: hover) {
-            &:hover {
-                transform: scale(1.1);
-            }
+        }
+        a {
+            display: block;
+            overflow: hidden;
+            // height: 100%;
+        }
+        img {
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: scale(1.05);
+                }
         }
     }
     
@@ -76,6 +84,10 @@
                 opacity: 0.7;
             }
         }
+        @media (max-width: 396px) {
+            align-self: center;
+            text-align: center;
+        }
     }
 
     // .production__item-category
@@ -95,6 +107,9 @@
                 color: $white;
                 opacity: 0.7;
             }
+        }
+        @media (max-width: 396px) {
+            align-self: center;
         }
     }
 }

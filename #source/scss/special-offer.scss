@@ -7,16 +7,12 @@
     &__row {
         margin: 0 auto;
         max-width: 2560px;
-        // @include adaptiveValue("min-height", 640, 540);
     }
 
     // .special-offer__left
 
     &__left {
         background: url(../img/home/offer/special-offer-1.jpg) bottom/cover no-repeat;
-        // display: flex;
-        // justify-content: flex-end;
-        // padding-right: 50px;
     }
 
     // .special-offer__right
@@ -29,9 +25,6 @@
     &__body {
         @include adaptiveValue("padding-left", 172, 20, 1600, 1000,1);
         @include adaptiveValue("padding-right", 172, 20, 1600, 1000,1);
-        // @media (max-width: 575px) {
-        //     height: 480px;
-        // }
     }
 
     // .special-offer__title

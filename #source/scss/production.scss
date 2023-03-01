@@ -45,16 +45,15 @@
     &__item-img-cnt {
         margin-bottom: 30px;
         overflow: hidden;
-        // height: 100%;
         border-radius: 0px 0px 0px 88.5484px;
         transition: all 0.3s ease 0s;
         }
         a {
             display: block;
             overflow: hidden;
-            // height: 100%;
         }
         img {
+            transition: all 0.3s ease 0s;
             @media (any-hover: hover) {
                 &:hover {
                     transform: scale(1.05);

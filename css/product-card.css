@@ -1,0 +1,5 @@
+.product-cards__wrapper {
+  display: grid;
+  grid-template-columns: 62% 1fr;
+}
+/*# sourceMappingURL=product-card.css.map */

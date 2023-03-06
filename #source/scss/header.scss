@@ -1,5 +1,8 @@
 .header {
 
+    @media (min-width: 1200px) {
+        margin-bottom: 45px;
+    }
     // .header__promo
 
     &__promo {
@@ -294,6 +297,12 @@
                 display: none;
             }
         }
+        .menu-open & {
+            @media (max-width: 380px) {
+                justify-content: start;
+                color: $color-grafit;
+            }
+        }
     }
 
     // .body-header__phone-body
@@ -313,6 +322,19 @@
             &:hover {
                 color: $white;
                 opacity: 0.8;
+            }
+        }
+        .menu-open & {
+            @media (max-width: 380px) {
+                color: $color-grafit;
+                font-size: 24px;
+                margin-top: 30px;
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $color-grafit;
+                        opacity: 0.8;
+                    }
+                }
             }
         }
     }
@@ -397,23 +419,24 @@
             justify-content: start;
         }
         svg.svg-red {
-            transition: all 0.3s ease 0s;
+            transition: opacity 0.3s ease 0s;
             opacity: 0;
-            display: none;
+            // display: none;
+            transform: translateX(-50%);
         }
         svg.svg-black {
-            transition: all 0.3s ease 0s;
-            opacity: 1;
+            transition: opacity 0.3s ease 0s;
+            opacity: 1;transform: translateX(50%);
         }
         &:hover svg.svg-red {
-            transition: all 0.3s ease 0s;
+            transition: opacity 0.3s ease 0s;
             opacity: 1;
-            display: block;
+            // display: block;
         }
         &:hover svg.svg-black {
-            transition: all 0.3s ease 0s;
+            transition: opacity 0.3s ease 0s;
             opacity: 0;
-            display: none;
+            // display: none;
         }
         &:hover &-text{
             transition: all 0.3s ease 0s;
@@ -453,6 +476,7 @@
         top: 45px;
         z-index: 15;
         svg {
+            // position: absolute;
             padding-bottom: 28px;
             display: block;
             stroke: $color-black;

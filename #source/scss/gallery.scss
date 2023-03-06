@@ -1,0 +1,137 @@
+.gallery {
+
+    // .gallery__container
+
+    &__container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 0;
+    }
+
+    // .gallery__row
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .gallery__row
+
+    &__tabs-row {
+        max-width: 1545px;
+        > .nav-item {}
+        .nav-link {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 120%;
+            letter-spacing: 0.01em;
+            color: $color-grafit;
+            margin: 0 rem(100) rem(14) 0;
+            max-width: 1400px;
+            padding: 0;
+            border: none;
+            &.active {
+                border: none;
+                color: $color-red;
+            }
+            @media (any-hover: hover){
+                &:hover,
+                &:focus,
+                &:focus-visible,
+                &:active {
+                    border: none;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    // .gallery__title
+
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        color: $color-grafit;
+        margin: rem(50) 0;
+        max-width: 1400px;
+        @media (max-width: 991px) {
+            margin: rem(20) 0;
+        }
+    }
+
+    // .gallery__body
+
+    &__body {
+        border-top: 10px solid $color-red;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    // .gallery__list
+
+    &__list {
+        > .active {
+            display: flex;
+            flex-wrap: wrap;
+            @media (max-width: 767px) {
+            }
+        }
+    }
+
+    // .gallery__item
+
+    &__item {
+        display: block;
+        width: 25%;
+        overflow: hidden;
+        background: #000;
+        img {
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: scale(1.05);
+                    opacity: 0.75;
+                }
+            }
+        }
+        @media (max-width: 767px) {
+            width: 50%;
+            flex: 1 0 auto;
+        }
+    }
+
+
+    // .product-cards__gallery
+
+    // &__gallery {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
+}
+.container {
+}
+.nav {
+}
+.nav-tabs {
+}
+.nav-item {
+}
+.nav-link {
+}
+.active {
+}
+.tab-content {
+}
+.tab-pane {
+}
+.fade {
+}
+.show {
+}
+.img-fluid {
+}

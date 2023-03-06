@@ -1,0 +1,201 @@
+.for-whom {
+
+    // .for-whom__container
+
+    &__container {
+        margin-top: 50px;
+        @include adaptiveValue("margin-bottom", 150, 50);
+    }
+
+    // .for-whom__row
+
+    &__row {
+        max-width: 1545px;
+        margin: 0 auto;
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            border-bottom: 1px solid $color-grafit;
+            @media (max-width: 991px) {
+                flex-direction: column;
+                border-bottom: 0;
+            }
+        }
+        .nav-item {
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            max-width: 245px;
+            @media (max-width: 1500px) {
+                @include adaptiveValue("max-width", 245, 125, 1500, 992, 1);
+            }
+            @media (max-width: 991px) {
+                max-width: 100%;
+                width: auto;
+                justify-content: start;
+                align-items: start;
+            }
+        }
+        .nav-link {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0.01em;
+            color: $color-grafit;
+            margin: 10px 0;
+            max-width: 1400px;
+            padding: 0;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            width: 100%;
+            min-height: 45px;
+            &.active {
+                border: none;
+                color: $color-red;
+                font-weight: 600;
+                border-bottom: 3px solid $color-red;
+                padding-bottom: 10px;
+                margin-bottom: -2px;
+            }
+            @media (any-hover: hover){
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+            @media (max-width: 991px) {
+                justify-content: start;
+                min-height: auto;
+                padding: 10px 0;
+                margin: 0;
+                &.active {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    // .for-whom__tabs-row
+
+    &__tabs-row {
+    }
+
+    // .for-whom__body
+
+    &__body {
+        margin-top: 67px;
+        @media (max-width: 991px) {
+            margin-top: 30px;
+        }
+    }
+
+    // .for-whom__wrapper
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 991px) {
+            flex-direction: column;
+        }
+    }
+
+    // .for-whom__list
+
+    &__list {
+    }
+
+    // .for-whom__item
+
+    &__item-right {
+        max-width: 628px;
+        padding-bottom: 30px;
+    }
+
+    // .for-whom__item-left
+
+    &__item-left {
+        max-width: 600px;
+        img {
+            border-radius: 0px 0px 0px 135.501px;
+        }
+    }
+
+    // .for-whom__title
+
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        color: $color-grafit;
+        margin: 0 0 rem(50) 0;
+        max-width: 1400px;
+        @media (max-width: 991px) {
+            margin-bottom: 30px;
+            @include adaptiveValue("font-size", 48, 28);
+        }
+    }
+
+    // .for-whom__desc
+
+    &__desc {
+        
+    }
+
+    // .for-whom__subtitle
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: $color-grafit;
+        margin: 0 0 rem(24) 0;
+
+    }
+
+    // .for-whom__desc-list
+
+    &__desc-list {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0.01em;
+        color: $color-grafit;
+        margin: 0 0 rem(56) rem(28);
+        li {
+            list-style-type: disc;
+            padding-left: rem(8);
+        }
+        @media (max-width: 991px) {
+            margin-bottom: 30px;
+        }
+    }
+}
+.container {
+}
+.row {
+}
+.nav {
+}
+.nav-tabs {
+}
+.nav-item {
+}
+.nav-link {
+}
+.active {
+}
+.tab-content {
+}
+.tab-pane {
+}
+.fade {
+}
+.show {
+}
+.img-fluid {
+}

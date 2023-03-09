@@ -134,5 +134,8 @@
         letter-spacing: 0.01em;
         color: $white;
         @include adaptiveValue("font-size", 24, 16);
+        &:hover {
+            cursor: default;
+        }
     }
 }

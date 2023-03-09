@@ -42,7 +42,7 @@
             gap: 30px;
             grid-template-columns: 1fr 1fr;
         }
-        @media (max-width: 575px) {
+        @media (max-width: 767px) {
             gap: 15px;
             grid-template-columns: 1fr;
         }
@@ -51,6 +51,16 @@
     // .product-cards__images
 
     &__images {
+        overflow: hidden;
+        img {
+            transition: all 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: scale(1.05);
+                    opacity: 0.75;
+                }
+            }
+        }
     }
 
     // .product-cards__body
@@ -93,6 +103,7 @@
             border-radius: 0px;
             &-mini {
                 width: 117px;
+                white-space: nowrap;
             }
             &.active {
                 border: 2px solid #BE1622;

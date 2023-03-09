@@ -3,7 +3,7 @@
     // .article__container
 
     &__container {
-        max-width: 1860px;
+        // max-width: 1860px;
     }
 
     // .article__row
@@ -17,27 +17,22 @@
     // .article__head
 
     &__head {
-        position: relative;
+        // position: relative;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        padding: 0;
+        // align-items: center;
     }
 
     // .article__title
 
     &__title {
-        position: absolute;
-        bottom: 10px;
         font-weight: 600;
         line-height: 100%;
         letter-spacing: 0.01em;
         color: #FFFFFF;
-        margin: 5px 10px;
-        @include adaptiveValue("min-width", 1520, 300);
         @include adaptiveValue("font-size", 48, 20);
         img {
-            min-height: 60px;
+            min-height: 80px;
         }
     }
 
@@ -46,6 +41,8 @@
     &__title-img {
         min-height: 80px;
         object-fit: cover;
+        // margin-bottom: -120px;
+        @include adaptiveValue("margin-bottom", -120, -70);
     }
 
     // .article__body
@@ -53,10 +50,10 @@
     &__body {
         display: flex;
         @include adaptiveValue("gap", 100, 50);
-        max-width: 1620px;
-        margin: 0 auto;
+        // max-width: 1620px;
+        // margin: 0 auto;
         @include adaptiveValue("padding-top", 70, 50);
-        @include adaptiveValue("padding-bottom", 160, 50);
+        @include adaptiveValue("padding-bottom", 70, 50);
         @media (max-width: 991.98px) {
             flex-direction: column;
             gap: 30px;
@@ -86,6 +83,8 @@
     // .article__form
 
     &__form {
+        margin-right: 83px;
+        @include adaptiveValue("margin-right", 83, 0, 2000, 1100, 1);
         .button-red {
             height: 100%;
             padding: 10px;
@@ -96,11 +95,11 @@
 
     &__readmore {
         @include adaptiveValue("margin-bottom", 86, 30);
-        margin: 0 auto;
+        // margin: 0 auto;
         @media (min-width: 1860px) {
             // max-width: 1860px;
-            margin-right: -110px;
-            margin-left: 130px;
+            // margin-right: -110px;
+            // margin-left: 130px;
         }
     }
 
@@ -119,39 +118,68 @@
 
     &__readmore-wrapper {
         display: flex;
-        gap: 30px;
-        // max-width: 100%;
+        gap: 1%;
         flex-wrap: wrap;
         :nth-child(4) {
             opacity: 0.3;
         }
         @media (max-width: 991.98px) {
+            justify-content: space-between;
+            gap: 20px;
+        }
+        @media (max-width: 576px) {
             flex-direction: column;
             gap: 30px;
+            justify-content: start;
         }
     }
 
     // .article__readmore-item
 
     &__readmore-item {
-        max-width: 440px;
+        // max-width: 440px;
+        width: 24%;
+        @media (max-width: 991.98px) {
+            width: 48%;
+        }
+        @media (max-width: 576px) {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+        }
+        @media (max-width: 399px) {
+            width: 100%;
+            display: block;
+        }
     }
 
     // .article__readmore-img
 
     &__readmore-img {
         margin-bottom: 22px;
+        @media (any-hover: hover){
+            &:hover{
+                opacity: 0.8;
+            }
+        }
     }
 
     // .article__readmore-title
 
     &__readmore-title {
         font-weight: 600;
-        font-size: 24px;
+        @include adaptiveValue("font-size", 24, 18, 2000, 1500, 1);
         line-height: 100%;
         letter-spacing: 0.01em;
         color: $color-grafit;
         margin-bottom: 14px;
+        a {
+            @media (any-hover: hover){
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
     }
 
     // .article__readmore-desc

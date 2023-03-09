@@ -5,7 +5,7 @@ body {
 }
 
 html {
-    font-size: 14px;
+    font-size: 18px;
     @media (min-width: 768px) {
         font-size: 14px;
     }
@@ -104,6 +104,12 @@ h6 {
 
 a {
     text-decoration: none;
+    color: $color-grafit;
+    @media (any-hover: hover){
+        &:hover{
+            color: $color-grafit;
+        }
+    }
 }
 
 .index-page {
@@ -230,7 +236,8 @@ button {
     color: $white;
     line-height: 120%;
     letter-spacing: 0.01em;
-    padding: 0;
+    text-align: center;
+    padding: 10px 0;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease 0s;
@@ -240,6 +247,7 @@ button {
     @media (any-hover: hover) {
         &:hover {
             opacity: 0.8;
+            color: $white;
         }
     }
 }

@@ -1,7 +1,7 @@
 .about-offer {
     background: $white;
-    @include adaptiveValue("padding-top", 130, 50);
-    @include adaptiveValue("padding-bottom", 117, 50);
+    @include adaptiveValue("padding-top", 82, 50);
+    @include adaptiveValue("padding-bottom", 119, 30);
 
     // .about-offer__container
 
@@ -20,7 +20,7 @@
 
     &__title-value {
         color: $color-grafit;
-        font-size: 48px;
+        @include adaptiveValue("font-size", 48, 24);
         font-weight: 400;
         line-height: 100%;
         letter-spacing: 0.01em;
@@ -122,11 +122,11 @@
 
     &__subtitle {
         font-weight: 600;
-        font-size: 24px;
+        @include adaptiveValue("font-size", 24, 18);
         line-height: 150%;
         letter-spacing: 0.01em;
         color: $color-grafit;
-        margin: 0 0 rem(24) 0;
+        // margin: 0 0 rem(24) 0;
         max-width: 1066px;
         @include adaptiveValue("margin-bottom", 100, 30);
     }
@@ -149,12 +149,30 @@
         letter-spacing: 0.01em;
         color: $color-grafit;
         margin: 0 0 rem(16) rem(28);
+        column-count: 3;
         li {
             list-style-type: disc;
             padding-left: rem(8);
+            margin-right: 30px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
         }
-        @media (max-width: 991px) {
+        @media (max-width: 991.98px) {
             margin-bottom: 30px;
+            column-count: 2;
+        }
+        @media (max-width: 576px) {
+            column-count: 1;
         }
     }
+}
+
+.for-whom-about-offer {
+    .nav.nav-tabs .nav-item:not(:last-child) {
+        margin-right: 20px;
+      }
+}
+.for-whom__col {
+    position: relative;
 }

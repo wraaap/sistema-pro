@@ -1,0 +1,219 @@
+.form {
+
+    width: 442px;
+    margin: 0 auto;
+    @media (max-width: 492px) {
+        width: 100%;
+    }
+
+    // .form__header
+
+    &__header {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        background: $color-red;
+        border: 1px solid #FCEAEA;
+        box-shadow: 0px 15px 26px -22px $color-red, 0px 37px 35px -10px #E3CACD;
+        border-radius: 0px;
+        // padding: 39px 41px;
+        position: relative;
+        z-index: 2;
+        @include adaptiveValue("padding", 40, 20);
+    }
+
+    // .form__body
+
+    &__body {
+        background: #F5F5F5;
+        border: 1px solid #FCEAEA;
+        box-shadow: 0px 15px 26px -22px $color-red, 0px 44px 50px -10px #E3CACD;
+        @include adaptiveValue("padding", 40, 20);
+        @include adaptiveValue("padding-top", 58, 30);
+
+    }
+
+    // .form__group
+
+    &__group {
+    }
+
+    // .form__group-file
+
+    &__group-file {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 27px;
+        gap: 10px;
+        input[type="file"] {
+            display: none;
+        }
+        .form__label {
+            font-size: 16px;
+        }
+        @media (max-width: 492px) {
+            flex-direction: column;
+        }
+    }
+
+    // .form__label
+
+    &__label {
+    }
+
+    // .form__file-label
+
+    &__file-label {
+        width: 170px;
+        @media (max-width: 492px) {
+            width: 100%;
+        }
+    }
+
+    // .form__input
+
+    &__input {
+        height: 42px;
+        margin-bottom: 20px;
+        background: #FFFFFF;
+        border: 1px solid $color-sand;
+        border-radius: 0px;
+        padding: 10px;
+        width: 100%;
+        &:focus {
+            border: 1px solid $color-grafit;
+            outline: none !important;
+        }
+        &::placeholder {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 120%;
+            letter-spacing: 0.01em;
+            color: $color-grafit;
+            &:focus {
+                color: $color-sand;
+            }
+        }
+    }
+
+    // .form__file-btn
+
+    &__file-btn {
+        background: $color-sand;
+        color: #fff;
+        border-radius: 6px;
+        display: inline-block;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        width: 162px;
+        height: 44px;
+        @media (max-width: 492px) {
+            width: 100%;
+        }
+    }
+
+    // .form__group-checkbox
+
+    &__group-checkbox {
+        margin-bottom: 23px;
+    }
+
+    // .form__checkbox
+
+    &__checkbox {
+        background: #FFFFFF;
+        border: 1px solid $color-grafit;
+        border-radius: 6px;
+        float: left;
+        margin-left: -1.5em;
+        width: 1em;
+        height: 1em;
+        margin-top: .25em;
+        border-width: 1px;
+        input[type=checkbox] {
+            position: relative;
+            cursor: pointer;
+            border: 1px solid $color-grafit;
+        }
+            input[type=checkbox]:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    top: 0;
+                    left: 0;
+                    border: 1px solid $color-grafit;
+        }
+        input[type=checkbox]:checked:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    top: 0;
+                    left: 0;
+                    background-color: $color-red;
+        }
+            input[type=checkbox]:checked:after {
+                    content: "";
+                    display: block;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 2px 2px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: 2px;
+                    left: 6px;
+        }
+    }
+
+    .form-check-input:checked {
+        background-color: $color-red;
+        border-color: $color-red; 
+    }
+
+    .form-check-input:focus {
+        border-color:#d26c6c;
+    }
+    .form-switch .form-check-input:focus {
+        // background-image: fill
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23d26c6c'/%3e%3c/svg%3e")
+}
+
+    // .form__checkbox-label
+
+    &__checkbox-label {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $color-grafit;
+    }
+
+    .button-red {
+        width: 100%;
+        font-size: 24px;
+        height: auto;
+    }
+}
+.form-group {
+}
+.form-control {
+}
+.form-control-file {
+}
+.form-check {
+}
+.form-check-input {
+}
+.form-check-label {
+}

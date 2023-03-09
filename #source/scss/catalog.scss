@@ -17,15 +17,25 @@
 .product-card {
 
     display: grid;
-    grid-template-rows: auto 1fr;
-    max-width: rem(450);
+    // grid-template-rows: auto 1fr;
+    flex: 0 0 25%;
     margin-bottom: 20px;
+    @media (max-width: 991.98px) {
+        flex: 0 1 33%;
+    }
+    @media (max-width: 767.98px) {
+        flex: 0 1 50%;
+    }
+    @media (max-width: 499.98px) {
+        flex: 0 1 100%;
+    }
     // .product-card__image-ibg
 
     &__image-ibg {
         position: relative;
         padding-bottom: percent(450, 443);
-        margin-bottom: rem(39);
+        @include adaptiveValue("margin-bottom", 39, 20);
+        overflow: hidden;
         img {
             position: absolute;
             width: 100%;
@@ -33,6 +43,13 @@
             top: 0;
             left: 0;
             object-fit: contain;
+            transition: all 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: scale(1.05);
+                    opacity: 0.75;
+                }
+            }
         }
     }
 

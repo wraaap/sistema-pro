@@ -4,8 +4,8 @@
 
     &__container {
         margin-top: 50px;
-        margin-bottom: 50px;
-        padding: 0;
+        // margin-bottom: 50px;
+        // padding: 0;
     }
 
     // .gallery__row
@@ -20,16 +20,18 @@
 
     &__tabs-row {
         max-width: 1545px;
-        > .nav-item {}
+        > .nav-tabs {
+            border: 0;
+        }
+
         .nav-link {
             font-weight: 600;
             font-size: 18px;
             line-height: 120%;
             letter-spacing: 0.01em;
             color: $color-grafit;
-            margin: 0 rem(100) rem(14) 0;
+            padding:rem(14) 0;
             max-width: 1400px;
-            padding: 0;
             border: none;
             &.active {
                 border: none;
@@ -51,7 +53,7 @@
 
     &__title {
         font-weight: 600;
-        font-size: 48px;
+        @include adaptiveValue("font-size", 48, 32);
         line-height: 120%;
         letter-spacing: 0.01em;
         color: $color-grafit;
@@ -88,6 +90,7 @@
         width: 25%;
         overflow: hidden;
         background: #000;
+        cursor: pointer;
         img {
             width: 100%;
             transition: all 0.3s ease 0s;
@@ -103,15 +106,22 @@
             flex: 1 0 auto;
         }
     }
+}
 
-
-    // .product-cards__gallery
-
-    // &__gallery {
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    // }
+.nav.nav-tabs {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: auto;
+    .nav-item {
+        &:not(:last-child) {
+            margin-right: 100px;
+        }
+        @media (max-width: 1400px) {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
 }
 .container {
 }

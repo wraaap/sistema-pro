@@ -17,7 +17,6 @@
     &__items {
         display: flex;
         justify-content: space-between;
-        position: relative;
         gap: 30px;
         @media (max-width: 991.98px) {
             position: static;
@@ -29,6 +28,12 @@
     // .map__info
 
     &__info {
+        .button-red {
+            width: 360px;
+            @media (max-width: 390px) {
+                width: 100%;
+            }
+        }
     }
 
     // .map__title
@@ -95,7 +100,7 @@
     // .map__icons-messanger
 
     &__icons-messanger {
-        flex: 1 0 auto;
+        flex: 0 0 auto;
     }
 
     // .map__socials
@@ -133,8 +138,12 @@
     // .map__body
 
     &__body {
-        @media (min-width: 992px) {
+        position: relative;
+        @media (min-width: 601px) {
             padding-right: 23px;
+        }
+        @media (max-width: 991.98px) {
+            min-height: 550px;
         }
     }
 
@@ -144,13 +153,16 @@
         position: absolute;
         right: 0;
         top: 63px;
-        @media (max-width: 991.98px) {
+        @include adaptiveValue("top", 63, 20, 2000, 1400, 1);
+        @media (max-width: 600px) {
             position: static;
-            @include adaptiveValue("margin-top", -400, -100);
+            margin-top: 30px;
+            // @include adaptiveValue("margin-top", -400, -100);
             // margin-top: -400px;
         }
         .button-red {
-            min-width: 360px;
+            min-width: 340px;
+            display: inline-block;
             @media (max-width: 460px) {
                 min-width: 100%;
                 height: 100%;

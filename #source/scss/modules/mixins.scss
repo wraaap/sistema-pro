@@ -1,6 +1,6 @@
 // Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
 $fontFamily: "";
-$fontSize: rem(14); // где 14(px) - размер шрифта по умолчанию из макета
+$fontSize: rem(18); // где 14(px) - размер шрифта по умолчанию из макета
 
 // Основные цвета
 $mainColor: #000; // Цвет шрифта по умолчанию
@@ -39,11 +39,11 @@ $responsiveType: 1;
 }
 //REM
 @function rem($px) {
-	$result: math.div($px, 14) + rem;
+	$result: math.div($px, 18) + rem;
 	@return $result;
 }
 //EM
-@function em($px, $current: 14) {
+@function em($px, $current: 18) {
 	$result: math.div($px, $current) + em;
 	@return $result;
 }
@@ -58,7 +58,7 @@ $responsiveType: 1;
 	}
 
 	// Для calc();
-	$addSize: math.div($startSize - $minSize, 14);
+	$addSize: math.div($startSize - $minSize, 18);
 
 	@if ($widthFrom == $containerWidth and $maxWidthContainer == 0) {
 		$widthFrom: $maxWidth;

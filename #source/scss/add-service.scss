@@ -29,15 +29,27 @@
     &__item {
         @include adaptiveValue("padding", 50, 5);
         padding: 50px;
+        @media (max-width: 991.98px) and (min-width: 487px) {
+            display: flex;
+            gap: 30px;
+            // width: 100%;
+        }
         @media (max-width: 486px) {
             width: 100%;
+            display: block;
         }
+    }
+
+    // .add-service__item-desc
+
+    &__item-desc {
     }
 
     // .add-service__item-img
 
     &__item-img {
         margin-bottom: 50px;
+        flex: 1 0 40%;
         @include adaptiveValue("margin-bottom", 50, 20);
         transition: all 0.3s ease 0s;
         a {
@@ -47,6 +59,7 @@
         }
         img {
             transition: all 0.3s ease 0s;
+            width: 100%;
             @media (any-hover: hover) {
                 &:hover {
                     transform: scale(1.05);

@@ -71,9 +71,9 @@
     &__btns {
         display: flex;
         justify-content: space-between;
+        gap: 10px;
         @media (max-width: 404px) {
             flex-wrap: wrap;
-            gap: 10px;
         }
         & .button {
             @media (max-width: 404px) {

@@ -53,15 +53,15 @@
 
     &__img-cnt {
         z-index: 5;
-        @include adaptiveValue("margin-right", 0, -200, 1600, 600);
+        // @include adaptiveValue("margin-right", 0, -200, 1600, 600);
     }
 }
 .scheme {
 
     &__img-body {
         position: relative;
-        width: 110%;
-        @include adaptiveValue("margin-left", 0, -200, 2600, 600);
+        // width: 110%;
+        // @include adaptiveValue("margin-left", 0, -200, 2600, 600);
     }
     
     // .scheme__img
@@ -169,5 +169,8 @@
         letter-spacing: 0.01em;
         color: $white;
         @include adaptiveValue("font-size", 24, 16);
+        &:hover {
+            cursor: default;
+        }
     }
 }

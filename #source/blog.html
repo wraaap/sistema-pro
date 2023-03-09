@@ -1,60 +1,70 @@
 <section class="blog">
     <div class="blog__container container">
         <div class="blog__row row">
-            <div class="blog__tabs-row">
-                <div class="blog__title">Блог</div>
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="signaling-tab" data-bs-toggle="tab" data-bs-target="#signaling" type="button" role="tab" aria-controls="signaling" aria-selected="true">Охранно-пожарная сигнализация</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="cctv-tab" data-bs-toggle="tab" data-bs-target="#cctv" type="button" role="tab" aria-controls="cctv" aria-selected="false">Видеонаблюдение</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="access-tab" data-bs-toggle="tab" data-bs-target="#access" type="button" role="tab" aria-controls="access" aria-selected="false">Контроль доступа</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="gate-tab" data-bs-toggle="tab" data-bs-target="#gate" type="button" role="tab" aria-controls="gate" aria-selected="false">Автоматические ворота</button>
-                    </li>
-                </ul>
-            </div>
-            <div class="blog__body">
-                <div class="blog__list tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="signaling" role="tabpanel" aria-labelledby="signaling-tab">
-                        <article class="blog__item">
-                            <div class="blog__item-img">
-                                <img class="img-fluid" src="img/blog/blog-01.jpg" data-fancybox alt="">
-                            </div>
-                            <div class="blog__item-title">Заголовок статьи</div>
-                            <div class="blog__item-desc">Краткое описание, монтаж охранно-пожарной сигнализации, систем видеонаблюдения, контроля доступа (домофоны, шлагбаумы, турникеты) ...</div>
-                        </article>
-                        <article class="blog__item">
-                            <div class="blog__item-img">
-                                <img class="img-fluid" src="img/blog/blog-01.jpg" data-fancybox alt="">
-                            </div>
-                            <div class="blog__item-title">Заголовок статьи</div>
-                            <div class="blog__item-desc">Краткое описание, монтаж охранно-пожарной сигнализации, систем видеонаблюдения, контроля доступа (домофоны, шлагбаумы, турникеты) ...</div>
-                        </article>
-                        <article class="blog__item">
-                            <div class="blog__item-img">
-                                <img class="img-fluid" src="img/blog/blog-01.jpg" data-fancybox alt="">
-                            </div>
-                            <div class="blog__item-title">Заголовок статьи</div>
-                            <div class="blog__item-desc">Краткое описание, монтаж охранно-пожарной сигнализации, систем видеонаблюдения, контроля доступа (домофоны, шлагбаумы, турникеты) ...</div>
-                        </article>
-                        <article class="blog__item">
-                            <div class="blog__item-img">
-                                <img class="img-fluid" src="img/blog/blog-01.jpg" data-fancybox alt="">
-                            </div>
-                            <div class="blog__item-title">Заголовок статьи</div>
-                            <div class="blog__item-desc">Краткое описание, монтаж охранно-пожарной сигнализации, систем видеонаблюдения, контроля доступа (домофоны, шлагбаумы, турникеты) ...</div>
-                        </article>
-                    </div>
-                    <div class="tab-pane fade" id="cctv" role="tabpanel" aria-labelledby="cctv-tab"><img class="img-fluid" src="img/product-card/gallery-02.jpg" data-fancybox alt=""></div>
-                    <div class="tab-pane fade" id="access" role="tabpanel" aria-labelledby="access-tab"><img class="img-fluid" src="img/product-card/gallery-03.jpg" data-fancybox alt=""></div>
-                    <div class="tab-pane fade" id="gate" role="tabpanel" aria-labelledby="gate-tab"><img class="img-fluid" src="img/product-card/gallery-04.jpg" data-fancybox alt=""></div>
+            <div class="col-xxl-10">
+                <div class="blog__tabs-row">
+                    <div class="blog__title">Блог</div>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="signaling-tab" data-bs-toggle="tab" data-bs-target="#signaling" type="button" role="tab" aria-controls="signaling" aria-selected="true">Охранно-пожарная сигнализация</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="cctv-tab" data-bs-toggle="tab" data-bs-target="#cctv" type="button" role="tab" aria-controls="cctv" aria-selected="false">Видеонаблюдение</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="access-tab" data-bs-toggle="tab" data-bs-target="#access" type="button" role="tab" aria-controls="access" aria-selected="false">Контроль доступа</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="gate-tab" data-bs-toggle="tab" data-bs-target="#gate" type="button" role="tab" aria-controls="gate" aria-selected="false">Автоматические ворота</button>
+                        </li>
+                    </ul>
                 </div>
-                <button class="more">Загрузить ещё</button>
+                <div class="blog__body">
+                    <div class="blog__list tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="signaling" role="tabpanel" aria-labelledby="signaling-tab">
+                            <article class="blog__item">
+                                <div class="blog__item-img">
+                                    <a href="" data-fancybox>
+                                        <img class="img-fluid" src="img/blog/blog-01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog__item-title"><a href="">Заголовок статьи</a></div>
+                                <div class="blog__item-desc">Краткое описание, монтаж охранно-пожарной сигнализации, систем видеонаблюдения, контроля доступа (домофоны, шлагбаумы, турникеты) ...</div>
+                            </article>
+                            <article class="blog__item">
+                                <div class="blog__item-img">
+                                    <a href="" data-fancybox>
+                                        <img class="img-fluid" src="img/blog/blog-01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog__item-title"><a href="">Заголовок статьи</a></div>
+                                <div class="blog__item-desc">Краткое описание, монтаж охранно-пожарной сигнализации, систем видеонаблюдения, контроля доступа (домофоны, шлагбаумы, турникеты) ...</div>
+                            </article>
+                            <article class="blog__item">
+                                <div class="blog__item-img">
+                                    <a href="" data-fancybox>
+                                        <img class="img-fluid" src="img/blog/blog-01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog__item-title"><a href="">Заголовок статьи</a></div>
+                                <div class="blog__item-desc">Краткое описание, монтаж охранно-пожарной сигнализации, систем видеонаблюдения, контроля доступа (домофоны, шлагбаумы, турникеты) ...</div>
+                            </article>
+                            <article class="blog__item">
+                                <div class="blog__item-img">
+                                    <a href="" data-fancybox>
+                                        <img class="img-fluid" src="img/blog/blog-01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog__item-title"><a href="">Заголовок статьи</a></div>
+                                <div class="blog__item-desc">Краткое описание, монтаж охранно-пожарной сигнализации, систем видеонаблюдения, контроля доступа (домофоны, шлагбаумы, турникеты) ...</div>
+                            </article>
+                        </div>
+                        <div class="tab-pane fade" id="cctv" role="tabpanel" aria-labelledby="cctv-tab"><img class="img-fluid" src="img/product-card/gallery-02.jpg" data-fancybox alt=""></div>
+                        <div class="tab-pane fade" id="access" role="tabpanel" aria-labelledby="access-tab"><img class="img-fluid" src="img/product-card/gallery-03.jpg" data-fancybox alt=""></div>
+                        <div class="tab-pane fade" id="gate" role="tabpanel" aria-labelledby="gate-tab"><img class="img-fluid" src="img/product-card/gallery-04.jpg" data-fancybox alt=""></div>
+                    </div>
+                    <button class="more">Загрузить ещё</button>
+                </div>
             </div>
         </div>
     </div>

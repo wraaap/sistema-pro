@@ -2,15 +2,7 @@
 	font-family: 'Gilroy-Black';
 	src: url('../fonts/gilroy-black.woff2') format('woff2'), /* Super Modern Browsers */
 		url('../fonts/gilroy-black.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-	font-family: 'Gilroy';
-	src: url('../fonts/gilroy-bold.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/gilroy-bold.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
-    font-weight: 700;
+    font-weight: 900;
     font-style: normal;
 }
 
@@ -18,7 +10,15 @@
 	font-family: 'Gilroy';
 	src: url('../fonts/gilroy-heavy.woff2') format('woff2'), /* Super Modern Browsers */
 		url('../fonts/gilroy-heavy.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
-    font-weight: 650;
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/gilroy-bold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/gilroy-bold.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -48,16 +48,16 @@
 
 @font-face {
 	font-family: 'Gilroy';
-	src: url('../fonts/gilroy-thin.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/gilroy-thin.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
-    font-weight: 300;
+	src: url('../fonts/gilroy-ultralight.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/gilroy-ultralight.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
+    font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
 	font-family: 'Gilroy';
-	src: url('../fonts/gilroy-ultralight.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/gilroy-ultralight.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
-    font-weight: 200;
+	src: url('../fonts/gilroy-thin.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/gilroy-thin.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
+    font-weight: 100;
     font-style: normal;
 }

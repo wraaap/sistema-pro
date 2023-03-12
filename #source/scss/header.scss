@@ -69,6 +69,9 @@
         text-transform: uppercase;
         display: flex;
         transition: all 0.3s ease 0s;
+        @media (max-width: 508px) {
+            font-weight: 600;
+        }
         &::after{
             content: "";
             display: block;
@@ -208,7 +211,7 @@
         a {
             color: $white;
             opacity: 0.5;
-            font-weight: 800;
+            font-weight: 600;
             display: flex;
             align-items: center;
             position: relative;

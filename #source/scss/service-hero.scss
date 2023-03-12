@@ -88,6 +88,9 @@
         @media (max-width: 1000px) {
             @include adaptiveValue("right", -700, -560, 1000, 320, 1);
         }
+        @media (max-width: 767px) {
+            right: -560px;
+        }
     }
     &__img-2 {
         position: absolute;

@@ -51,7 +51,16 @@
     // .product-cards__images
 
     &__images {
-        overflow: hidden;
+        // display: flex;
+        // align-items: start;
+        // height: 749px;
+        // width: 100%;
+        a {
+            overflow: hidden;
+            display: block;
+            // height: 100%;
+            width: 100%;
+        }
         img {
             transition: all 0.3s ease 0s;
             @media (any-hover: hover) {

@@ -52,6 +52,14 @@
         align-items: center;
         overflow: hidden;
         position: relative;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                & img.works__img-bg {
+                    transform: scale(1.05);
+                }
+            }
+        }
         @media (max-width: 1920px) {
             flex: 0 1 24%;        
         }
@@ -83,12 +91,12 @@
         height: 100%;
         object-fit: cover;
         opacity: 0.3;
-        transition: all 0.3s ease 0s;
-            @media (any-hover: hover) {
-                &:hover {
-                    transform: scale(1.05);
-                }
-            }
+        // transition: all 0.3s ease 0s;
+        // @media (any-hover: hover) {
+        //     &:hover {
+        //         transform: scale(1.05);
+        //     }
+        // }
     }
 
     // .works__body

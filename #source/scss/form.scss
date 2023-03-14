@@ -3,7 +3,7 @@
     width: 442px;
     margin: 0 auto;
     @media (max-width: 492px) {
-        width: 100%;
+        width: 100% !important;
     }
 
     // .form__header

@@ -7,6 +7,13 @@
 
     &__container {
     }
+    // .about-offer__row
+
+    &__row {
+        // > div {
+        //     padding: 0;
+        // }
+    }
 
     // .about-offer__title
 
@@ -45,6 +52,9 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 30px;
+        }
+        @media (max-width: 576px) {
             gap: 20px;
         }
     }
@@ -53,34 +63,26 @@
 
     &__icon-block-item {
         display: grid;
+        justify-content: center;
         gap: 10px;
-        grid-template-rows: 205px auto;
+        grid-template-rows: 130px auto;
         @media (max-width: 1200px) {
-            grid-template-rows: 130px auto;
+            grid-template-rows: 110px auto;
         }
-        // @media (max-width: 767px) {
-        //     max-width: 155px;
-        // }
-        // @media (max-width: 576px) {
-        //     max-width: 160px;
-        //     grid-template-rows: 80px auto;
-        //     &:not(:last-child) {
-        //         padding-bottom: 10px;
-        //     }
-        // }
         @media (max-width: 767px) {
             max-width: 155px;
-            grid-template-rows: 110px auto;
+            grid-template-rows: 90px auto;
         }
         @media (max-width: 576px) {
             grid-template-rows: 90px auto;
             max-width: 136px;
             gap: 10px;
-            &:not(:last-child) {
-                padding-bottom: 10px;
-            }
+            // &:not(:last-child) {
+            //     padding-bottom: 10px;
+            // }
         }
         @media (max-width: 365px) {
+            // max-width: 130px;
             grid-template-rows: 80px auto;
         }
     }

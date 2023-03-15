@@ -153,7 +153,7 @@
 
     &__body {
         position: relative;
-        @media (min-width: 601px) {
+        @media (min-width: 769px) {
             padding-right: 23px;
         }
         @media (max-width: 991.98px) {
@@ -168,7 +168,7 @@
         right: 0;
         top: 63px;
         @include adaptiveValue("top", 63, 20, 2000, 1400, 1);
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             position: static;
             margin-top: 30px;
             // @include adaptiveValue("margin-top", -400, -100);

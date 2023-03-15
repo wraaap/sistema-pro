@@ -247,8 +247,8 @@
         height: 450px;
         background: $color-sand;
         padding: 25px;
+        flex: 0 1 24%;
         @media (max-width: 1920px) {
-            flex: 0 1 24%;
             height: 360px;
         }
         @media (max-width: 1800px) {

@@ -71,9 +71,7 @@
         max-width: 100%;
         height: auto;
         @include adaptiveValue("min-height", 794, 360, 1800, 500, 1);
-        // @media (max-width: em(1560)) {
-            width: auto;
-            object-fit: cover;
-        // }
+        width: auto;
+        object-fit: cover;
     }
 }

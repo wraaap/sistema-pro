@@ -51,14 +51,9 @@
     // .product-cards__images
 
     &__images {
-        // display: flex;
-        // align-items: start;
-        // height: 749px;
-        // width: 100%;
         a {
             overflow: hidden;
             display: block;
-            // height: 100%;
             width: 100%;
         }
         img {
@@ -269,12 +264,6 @@
     &.option-block {
         max-width: 487px;
         padding: rem(15);
-        // @media (max-width: 991px) {
-        //     width: 371px;
-        // }
-        // @media (max-width: 767px) {
-        //     width: 243px;
-        // }
     }
 }
 .option-type {

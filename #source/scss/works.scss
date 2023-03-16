@@ -32,16 +32,9 @@
 
     &__items {
         display: flex;
-        // justify-content: space-between;
         gap: 15px;
         flex-wrap: wrap;
         padding: 0;
-        // @media (max-width: 1800px) {
-        //     gap: 10px;      
-        // }
-        // @media (max-width: 1640px) {
-        //     gap: 5px;      
-        // }
     }
 
     // .works__item
@@ -56,6 +49,7 @@
         @media (any-hover: hover) {
             &:hover {
                 & img.works__img-bg {
+                    transition: all 0.3s ease 0s;
                     transform: scale(1.05);
                 }
             }
@@ -68,17 +62,10 @@
         }
         @media (max-width: 991.98px) {
             flex: 0 0 48%;
-            // height: 345px;
         }
         @media (max-width: 767.98px) {
-            // height: 370px;
             flex: 0 0 100%;
-            // height: 450px;
         }
-        // @media (max-width: 575.98px) {
-        //     flex: 0 0 100%;
-        //     height: 450px;
-        // }
     }
 
     // .works__img-bg
@@ -91,12 +78,6 @@
         height: 100%;
         object-fit: cover;
         opacity: 0.3;
-        // transition: all 0.3s ease 0s;
-        // @media (any-hover: hover) {
-        //     &:hover {
-        //         transform: scale(1.05);
-        //     }
-        // }
     }
 
     // .works__body
@@ -152,7 +133,6 @@
         @media (max-width: 575.98px) {
             height: 450px;
             grid-template-rows: 40% 60%;
-            // gap: 0;
         }
         @media (max-width: 430px) {
             height: 430px;
@@ -220,9 +200,6 @@
         @media (max-width: 1240px) {
             font-size: 16px;
         }
-        // @media (max-width: 991.98px) {
-        //     font-size: 17px;
-        // }
         @media (max-width: 767.98px) {
             font-size: 18px;
         }
@@ -243,7 +220,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // width: 450px;
         height: 450px;
         background: $color-sand;
         padding: 25px;
@@ -317,10 +293,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // max-width: 450px;
-        // height: 450px;
         position: relative;
-        // padding: 25px;
     }
 
     // .works__item-form-header

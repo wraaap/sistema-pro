@@ -47,28 +47,23 @@
         left: 50%;
         transform: translate(-50%);
         z-index: 0;
-        // max-width: 100%;
         height: 100%;
     }
 
     &__img-cnt {
         z-index: 5;
-        // @include adaptiveValue("margin-right", 0, -200, 1600, 600);
     }
 }
 .scheme {
 
     &__img-body {
         position: relative;
-        // width: 110%;
-        // @include adaptiveValue("margin-left", 0, -200, 2600, 600);
     }
     
     // .scheme__img
     
     &__img {
         max-width: 100%;
-        // min-height: 1216px;
     }
 
     // .scheme__img-circle

@@ -4088,6 +4088,7 @@ body._lock {
 }
 @media (any-hover: hover) {
   .works__item:hover img.works__img-bg {
+    transition: all 0.3s ease 0s;
     transform: scale(1.05);
   }
 }

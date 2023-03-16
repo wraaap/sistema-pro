@@ -1,7 +1,5 @@
 .special-offer {
 
-    
-
     // .special-offer__row
 
     &__row {
@@ -62,7 +60,6 @@
         }
     }
     
-
     &__button {
         @include adaptiveValue("margin-bottom", 63, 25);
     }

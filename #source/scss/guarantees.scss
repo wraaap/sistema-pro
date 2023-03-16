@@ -39,9 +39,6 @@
             justify-content: center;
             gap: 20px;
         }
-        // @media (max-width: 356px) {
-        //     justify-content: space-between;
-        // }
     }
 
     // .guarantees__icon-block-item
@@ -50,9 +47,6 @@
         display: grid;
         gap: 10px;
         grid-template-rows: 130px auto;
-        // @media (max-width: 1200px) {
-        //     grid-template-rows: 160px auto;
-        // }
         @media (max-width: 767px) {
             max-width: 155px;
             grid-template-rows: 110px auto;

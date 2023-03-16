@@ -152,9 +152,6 @@
         display: flex;
         justify-content: center;
         flex: 1 0 auto;
-        @media (max-width: 770px) {
-            // display: none;
-        }
         @media (max-width: 1199.98px) {
             position: fixed;
             width: 100%;
@@ -289,6 +286,7 @@
         gap: 30px;
         align-items: center;
     }
+    
     // .body-header__phone
 
     &__phone {

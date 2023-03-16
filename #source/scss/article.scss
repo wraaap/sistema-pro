@@ -3,7 +3,6 @@
     // .article__container
 
     &__container {
-        // max-width: 1860px;
     }
     &__container-header {
         padding: 0;
@@ -21,10 +20,8 @@
     // .article__head
 
     &__head {
-        // position: relative;
         display: flex;
         flex-direction: column;
-        // align-items: center;
     }
 
     // .article__title
@@ -46,7 +43,6 @@
         min-height: 145px;
         object-fit: cover;
         width: 100%;
-        // margin-bottom: -120px;
         @include adaptiveValue("margin-bottom", -120, -70);
     }
 
@@ -55,8 +51,6 @@
     &__body {
         display: flex;
         @include adaptiveValue("gap", 100, 50);
-        // max-width: 1620px;
-        // margin: 0 auto;
         @include adaptiveValue("padding-top", 70, 50);
         @include adaptiveValue("padding-bottom", 70, 50);
         @media (max-width: 991.98px) {
@@ -100,12 +94,6 @@
 
     &__readmore {
         @include adaptiveValue("margin-bottom", 86, 30);
-        // margin: 0 auto;
-        @media (min-width: 1860px) {
-            // max-width: 1860px;
-            // margin-right: -110px;
-            // margin-left: 130px;
-        }
     }
 
     // .article__readmore-header
@@ -139,7 +127,6 @@
     // .article__readmore-item
 
     &__readmore-item {
-        // max-width: 440px;
         width: 24%;
         @media (max-width: 991.98px) {
             width: 48%;
